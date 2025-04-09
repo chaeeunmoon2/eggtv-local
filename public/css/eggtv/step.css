@@ -1,0 +1,142 @@
+
+@font-face {
+    font-family: 'Noto Sans KR Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSans-Regular.eot);
+    src: url(/fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(/fonts/NotoSans-Regular.woff2) format("woff2"), url(/fonts/NotoSans-Regular.woff) format("woff"), url(/fonts/NotoSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Noto Sans KR Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/NotoSans-Medium.eot);
+    src: url(/fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(/fonts/NotoSans-Medium.woff2) format("woff2"), url(/fonts/NotoSans-Medium.woff) format("woff"), url(/fonts/NotoSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Noto Sans KR Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/NotoSans-Bold.eot);
+    src: url(/fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(/fonts/NotoSans-Bold.woff2) format("woff2"), url(/fonts/NotoSans-Bold.woff) format("woff"), url(/fonts/NotoSans-Bold.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff2dd;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    overflow:auto;
+}
+
+.list {
+    padding: 1rem 0;
+}
+
+.item {
+    padding-right: 0.5rem;
+    list-style: none;
+    user-select: none;
+    margin-bottom: 10px;
+}
+.item-video {
+    margin-right: 10px;
+    width: 250px;
+}
+.item-audio {
+    margin-right: 15px;
+    width: 180px;
+}
+
+.image-banner {
+    width: 130px;
+}
+.image-video {
+    width: 250px;
+}
+.image-audio {
+    width: 160px;
+}
+
+.item:first-child {
+}
+
+.item-title {
+    font-family: var(--font-family-noto);
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    text-align: left;
+    height: 27px;
+}
+.item-title-audio {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+a {
+
+    text-decoration: none;
+}
+.item-category {
+    font-family: var(--font-family-noto);
+    font-size: 12px;
+    color: #5d5d5d;
+    font-weight: 400;
+    text-align: left;
+}
+
+.link {
+    display: block;
+    -webkit-user-drag: none;
+}
+
+.image {
+    display: block;
+    -webkit-user-drag: none;
+    border-radius: 10px;
+}
+
+.more {
+    margin-top: 20px;
+}
+
+.contents {
+    padding: 10px;
+}
+
+ul {
+
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    display: inline-block;
+}
+
+.btn-back {
+    float: left;
+}
+
+.btn-home {
+    float: right;
+}
+
+.image-book {
+    width: 250px;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="viewport-fit=cover" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no"
+  />
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>EGGTV List</title>
+  <link rel="preconnect" href="https://de2tho0n83703.cloudfront.net/" />
+  <link rel="stylesheet" href="/public/css/eggtv/common.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="/public/css/eggtv/main.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="/public/css/eggtv/popup_v1.css" type="text/css" charset="utf-8"/>
+  <script src="/public/js/eggtv/common_240928.js"></script>
+  <!-- <script src="/public/js/eggtv/step.js"></script> -->
+</head>
+
+<body>
+<!--<input type="hidden" name="_token" value="{{ csrf_token() }}" />-->
+<!--<input type="hidden" name="token" id="token" value="{{ $token }}" />-->
+<!--<input type="hidden" name="step" id="step" value="{{ $step }}" />-->
+<section class="step_page">
+  <!--비디오 연속재생 팝업-->
+  <div class="popup video_popup">
+    <div class="pop_wrap">
+      <div class="inner">
+        <p class="title"><span>어떤 비디오부터 재생하시겠어요?</span></p>
+        <ul class="video_thumnail list-vod">
+        </ul>
+      </div>
+      <button class="pop_close">팝업닫기</button>
+    </div>
+    <div class="shadow"></div>
+  </div>
+  <!--//비디오 연속재생 팝업-->
+
+  <!--오디오 연속재생 팝업-->
+  <div class="popup audio_popup">
+    <div class="pop_wrap">
+      <div class="inner">
+        <p class="title"><span>어떤 오디오부터 재생하시겠어요?</span></p>
+        <ul class="video_thumnail list-audio">
+        </ul>
+      </div>
+      <button class="pop_close">팝업닫기</button>
+    </div>
+    <div class="shadow"></div>
+  </div>
+  <!--//오디오 연속재생 팝업-->
+
+  <!--step01~05-->
+  <div class="move_header">
+    <div class="bar_header step_header eng_play normal">
+      <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
+      <div class="wrap block">
+        <!-- <a href="/eggtv/app/main?index={{ $index }}" class="prev_arrow">이전페이지</a> -->
+        <div class="title_block">
+          <a href="#" onclick="return false;" class="prev_arrow">이전페이지</a>
+          <p><!--여기 텍스트도 맞게 변경해야합니다!!-->
+            <strong><img src="/public/img/common/eng_play_logo.png" alt="" style="width: 17rem"></strong>
+            <em>Everyday Life! 생활 속 아이의 일상 이야기</em>
+          </p>
+        </div>
+        <!--S:모음 버튼-->
+        <!--E:모음 버튼-->
+      </div>
+      
+    </div>
+    <div class="bar_header step_header eng_play scroll"> <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
+      <div class="wrap">
+        <!-- <a href="/eggtv/app/main?index={{ $index }}" class="prev_arrow">이전페이지</a> -->
+        <a href="#" onclick="return false;" class="prev_arrow">이전페이지</a>
+        <p><!--여기 텍스트도 맞게 변경해야합니다!!-->
+          <strong><img src="/public/img/common/eng_play_logo.png" alt="" style="width: 17rem"></strong>
+          <em>Everyday Life! 생활 속 아이의 일상 이야기</em>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!--step01-->
+
+  <div class="wrap">
+    <div class="search_thumnail">
+      <ul class="list-book">
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+        <li class="item-book">
+          <a class="link" href="">
+            <img class="image image-book" src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png' alt="교재 이미지" id="" loading="lazy">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+<!--    <div class="play_btn_area">-->
+<!--      <a href="#" onclick="return false;" class="play_btn01" id="video_pop">연속재생</a>-->
+<!--      <a href="#" onclick="return false;" class="play_btn02" id="audio_pop">연속재생</a>-->
+<!--    </div>-->
+  </div>
+</section>
+</body>
+<script>
+  $(document).ready(function () {
+    //비디오 영상팝업 오픈
+    $(".btn_video_pop").on("click", function () {
+      $(".video_popup").show();
+    });
+    $(".video_popup .pop_close").on("click", function () {
+      $(".video_popup").hide();
+    });
+    //오디오 영상팝업 오픈
+    $(".btn_audio_pop").on("click", function () {
+      $(".audio_popup").show();
+    });
+    $(".audio_popup .pop_close").on("click", function () {
+      $(".audio_popup").hide();
+    });
+  });
+</script>
+</html>

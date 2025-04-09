@@ -1,0 +1,585 @@
+body {
+  background-color: #fff;
+}
+
+.certification_page {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab > li {
+  width: 50%;
+  text-align: center;
+}
+.tab > li > a {
+  font-size: 2.6rem;
+  color: #aeaeae;
+  font-weight: 600;
+  display: block;
+  background-color: #f2f2f2;
+  border: 0.2rem solid #e2e2e2;
+  border-top: 0;
+  border-left: 0;
+  padding: 0.8rem 2rem 1.5rem 2rem;
+}
+.tab > li:first-child > a {
+  border-left: 0.2rem solid #e2e2e2;
+}
+.tab > li.current > a {
+  background-color: #fff;
+  border-bottom: 0;
+  color: #1b1b1b;
+}
+.tab_contents {
+  padding: 4rem 3rem;
+}
+.top_p {
+  color: #313131;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 3rem;
+}
+.top_p .pointR {
+  font-weight: 600;
+}
+
+.agree_box {
+  background: #f6f6f6;
+  padding-top: 2.5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.agree_box .checkbox {
+  margin-top: 2.5rem;
+  padding: 0 3rem;
+  position: relative;
+}
+.agree_box .checkbox input[type="checkbox"] + label {
+  font-size: 1.8rem;
+  color: #626262;
+  padding-top: 0;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+}
+
+.agree_box .checkbox input[type="checkbox"] + label:before {
+  border-radius: 0.2rem;
+  background: url("/img/mypage/agree_check_default.png") center no-repeat;
+  background-size: 100%;
+  top: 0;
+  transition: none;
+}
+.agree_box .checkbox input[type="checkbox"]:checked + label:before {
+  background: url("/img/mypage/agree_check_on.png") center no-repeat;
+  background-size: 100%;
+}
+.agree_box .checkbox.total_agree {
+  padding-bottom: 2rem;
+  margin-top: 0;
+}
+.agree_box .checkbox.total_agree input[type="checkbox"] + label {
+  font-size: 2rem;
+  color: #434343;
+  font-weight: 600;
+}
+.other_agree .checkbox:after {
+  content: "";
+  width: 0.7rem;
+  height: 1.3rem;
+  background: url(/img/mypage/agree_arrow.png) center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 3rem;
+  top: 0.7rem;
+}
+
+.other_agree {
+  border-top: 0.2rem solid #e6e6e6;
+  padding: 2.5rem 0;
+  transition: height 0.5s;
+}
+.other_agree.hide {
+  height: 0;
+  padding: 0;
+  border-top: 0;
+}
+.other_agree .checkbox:first-child {
+  margin-top: 0;
+}
+
+.input_box {
+  margin-top: 3rem;
+}
+.input_box > div {
+  margin-top: 1.5rem;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input_box > div input,
+.input_box > div .select {
+  -webkit-border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none !important;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  border: 0.2rem solid #e2e2e2;
+  background: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 1.2rem;
+  height: 7rem;
+  width: 100%;
+}
+.input_box > div input:focus {
+  border-color: #d9262c;
+}
+.input_box > div .select {
+  background: none;
+  background: url(/img/mypage/select_arrow.png) right 2rem center no-repeat;
+  background-size: 1.4rem;
+  display: block;
+  line-height: 4.2rem;
+  color: #aaa;
+}
+.input_box > div .select.value {
+  color: #333;
+}
+.input_box > div input::placeholder {
+  color: #aaa;
+}
+.shadow {
+  background-color: rgba(0, 0, 0, 0.45);
+  display: none;
+}
+
+.select_box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 150;
+  padding: 3rem 6rem;
+  border-radius: 2rem 2rem 0 0;
+  display: none;
+}
+.select_box li {
+  color: #aaa;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.select_box li:hover {
+  color: #1b1b1b;
+}
+.select_box .title {
+  color: #1b1b1b;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.phone_certification {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.phone_certification > .phone_input {
+  width: 75%;
+}
+.phone_certification .btnarea {
+  width: 25%;
+  padding-left: 1.2rem;
+}
+.phone_certification .btnarea a {
+  background: #c6c6c6;
+  color: #fff;
+  display: block;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  height: 7rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  line-height: 5rem;
+  width: 100%;
+  text-align: center;
+}
+.phone_certification .btnarea .red {
+  background: #d9262c;
+}
+.phone_certification .btnarea .resend {
+  background: #4472c4;
+  display: none;
+}
+.phone_certification .btnarea a.hide {
+  display: none;
+}
+.phone_certification .btnarea .resend.show {
+  display: block;
+}
+.certification_num {
+  width: 100%;
+  position: relative;
+  margin-top: 1.5rem;
+  display: none;
+}
+.certification_num .count {
+  font-size: 2rem;
+  color: #3326d9;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.phone_certification.send .certification_num {
+  display: block;
+}
+
+.input_box > div.btm_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.btm_btn > a {
+  width: calc(50% - 1rem);
+  text-align: center;
+  margin-right: 2rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem 1.5rem 2.5rem;
+}
+.btm_btn > a:last-child {
+  margin-right: 0;
+}
+.btm_btn > a.red {
+  background: #d9262c;
+}
+
+.pass_start {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0 5rem 0;
+}
+.pass_start .top_p {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+.pass_start img {
+  width: 100%;
+  display: block;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.pass_start .text {
+  font-size: 2rem;
+  color: #313131;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  line-height: 1.4;
+}
+.pass_start .small_text {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.close_pass {
+  position: absolute;
+  right: 5rem;
+  top: 3rem;
+  font-size: 0;
+  line-height: 0;
+  width: 5rem;
+  height: 5rem;
+  background: url(/img/mypage/pass_close.png) center no-repeat;
+  background-size: 100%;
+}
+
+.agree_pop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 150;
+  height: 100vh;
+  padding: 10rem 0 0 0;
+  overflow-y: auto;
+  display: none;
+}
+.agree_pop .pop_title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 0 3rem;
+}
+.agree_pop .check {
+  display: flex;
+  padding: 0 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.agree_pop .check a {
+  font-size: 2.3rem;
+  margin-right: 1.5rem;
+  width: calc((100% - 3rem) / 3);
+  text-align: center;
+  padding: 0.7rem 2.5rem 1rem 2.5rem;
+  font-weight: 600;
+}
+.agree_pop .check a.red {
+  background: #d9262c;
+}
+.agree_pop .textarea {
+  background: #f2f2f2;
+  width: 100%;
+  margin-top: 4rem;
+  padding: 3rem;
+  display: none;
+}
+.agree_pop .textarea.current {
+  display: block;
+}
+.agree_pop .textarea > * {
+  font-size: 3rem;
+  word-break: break-all;
+}
+
+@media (max-width: 1800px) {
+  .certification_page {
+    max-width: initial;
+  }
+  .tab > li > a {
+    border-right: none;
+  }
+  .tab > li:first-child > a {
+    border-left: none;
+  }
+  .tab > li:first-child.current > a {
+    border-right: 0.2rem solid #e2e2e2;
+  }
+  .tab > li:last-child.current > a {
+    border-left: 0.2rem solid #e2e2e2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tab > li > a {
+    padding: 2rem 2rem 2.5rem 2rem;
+    font-size: 3rem;
+  }
+  .tab_contents {
+    padding: 5rem 4rem;
+  }
+  .top_p {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+  .agree_box .checkbox.total_agree input[type="checkbox"] + label {
+    font-size: 2.8rem;
+    min-height: 4rem;
+    padding-left: 5.5rem;
+  }
+  .agree_box .checkbox input[type="checkbox"] + label:before {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .agree_box .checkbox input[type="checkbox"] + label {
+    font-size: 2.4rem;
+    min-height: 4rem;
+    padding-left: 5.5rem;
+  }
+  .other_agree {
+    padding: 3.5rem 0;
+  }
+  .other_agree .checkbox:after {
+    width: 1.2rem;
+    height: 2.3rem;
+  }
+  .input_box {
+    margin-top: 5rem;
+  }
+  .input_box > div {
+    margin-top: 2.5rem;
+  }
+  .input_box > div input,
+  .input_box > div .select {
+    font-size: 2.5rem;
+    font-weight: 500;
+    height: 9rem;
+    padding: 1.2rem 2.8rem;
+  }
+  .input_box > div .select {
+    line-height: 6.2rem;
+    background-size: 2rem;
+  }
+  .phone_certification .btnarea a {
+    height: 9rem;
+    font-size: 2.6rem;
+    line-height: 7rem;
+  }
+  .certification_num .count {
+    font-size: 2.5rem;
+    top: 2.4rem;
+  }
+  .select_box {
+    padding: 5rem 6rem;
+  }
+  .select_box .title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+  .select_box li {
+    font-size: 3.2rem;
+    margin-top: 2rem;
+  }
+  .agree_pop {
+    padding: 13rem 0 0 0;
+  }
+  .agree_pop .pop_title {
+    font-size: 3.5rem;
+    padding: 0 3rem;
+  }
+  .agree_pop .check {
+    padding: 0 3rem;
+  }
+  .agree_pop .check a {
+    font-size: 3rem;
+  }
+  .close_pass {
+    width: 6rem;
+    height: 6rem;
+  }
+  .pass_start .top_p {
+    font-size: 4rem;
+    margin-bottom: 7rem;
+  }
+  .pass_start .text {
+    font-size: 3rem;
+    margin: 6rem 0 3rem;
+  }
+  .pass_start .small_text {
+    font-size: 2.2rem;
+  }
+}
+@media all and (min-height: 667px) and (max-width: 414px) {
+  .tab > li > a {
+    padding: 2rem 2rem 2.5rem 2rem;
+    font-size: 3rem;
+  }
+  .tab_contents {
+    padding: 5rem 4rem;
+  }
+  .top_p {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+  .agree_box .checkbox.total_agree input[type="checkbox"] + label {
+    font-size: 2.8rem;
+    min-height: 4rem;
+    padding-left: 5.5rem;
+  }
+  .agree_box .checkbox input[type="checkbox"] + label:before {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .agree_box .checkbox input[type="checkbox"] + label {
+    font-size: 2.4rem;
+    min-height: 4rem;
+    padding-left: 5.5rem;
+  }
+  .other_agree {
+    padding: 3.5rem 0;
+  }
+  .other_agree .checkbox:after {
+    width: 1.2rem;
+    height: 2.3rem;
+  }
+  .input_box {
+    margin-top: 5rem;
+  }
+  .input_box > div {
+    margin-top: 2.5rem;
+  }
+  .input_box > div input,
+  .input_box > div .select {
+    font-size: 2.5rem;
+    font-weight: 500;
+    height: 9rem;
+    padding: 1.2rem 2.8rem;
+  }
+  .input_box > div .select {
+    line-height: 6.2rem;
+    background-size: 2rem;
+  }
+  .phone_certification .btnarea a {
+    height: 9rem;
+    font-size: 2.6rem;
+    line-height: 7rem;
+  }
+  .certification_num .count {
+    font-size: 2.5rem;
+    top: 2.4rem;
+  }
+  .select_box {
+    padding: 5rem 6rem;
+  }
+  .select_box .title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+  .select_box li {
+    font-size: 3.2rem;
+    margin-top: 2rem;
+  }
+  .agree_pop {
+    padding: 13rem 0 0 0;
+  }
+  .agree_pop .pop_title {
+    font-size: 3.5rem;
+    padding: 0 3rem;
+  }
+  .agree_pop .check {
+    padding: 0 3rem;
+  }
+  .agree_pop .check a {
+    font-size: 3rem;
+  }
+  .close_pass {
+    width: 6rem;
+    height: 6rem;
+  }
+  .pass_start .top_p {
+    font-size: 4rem;
+    margin-bottom: 7rem;
+  }
+  .pass_start .text {
+    font-size: 3rem;
+    margin: 6rem 0 3rem;
+  }
+  .pass_start .small_text {
+    font-size: 2.2rem;
+  }
+}
+.alert-msg{
+    color: #ec333a;
+}

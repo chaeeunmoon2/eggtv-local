@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="viewport" content="... viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="viewport-fit=cover" />
+  <title>EGGTV Main</title>
+  <link rel="preconnect" href="https://de2tho0n83703.cloudfront.net/" />
+  <link rel="stylesheet" href="/public/css/lib/swiper-9/swiper-bundle.min.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="/public/css/eggtv/common.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="/public/css/eggtv/main_241010.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="/public/css/eggtv/popup_v1.css" type="text/css" charset="utf-8"/>
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+  <script src="/public/js/lib/swiper-9/swiper-bundle.min.js"></script>
+  <script src="/public/js/eggtv/main_20240712.js"></script>
+  <script src="/public/js/eggtv/common_240928.js"></script>
+</head>
+<body>
+<!--<input type="hidden" name="_token" value="{{ csrf_token() }}" />-->
+<!--<input type="hidden" name="token" id="token" value="{{ @$token }}" />-->
+<!--<input type="hidden" name="json_token" id="json_token" value="{{ @$cookies['eggtvJsonToken'] }}" />-->
+<!--<input type="text" name="index" id="index" value="{{ @$index ?? 0 }}" style="display: none" />-->
+<!--<form name="banner_form" id="frm-book" action="/eggtv/app/step" method="get">-->
+<!--  @csrf-->
+<!--  <input type="hidden" id="book-step" name="step">-->
+<!--  <input type="hidden" id="book-index" name="index">-->
+<!--  <input type="hidden" id="book-title" name="title">-->
+<!--  <input type="hidden" id="book-sub-title" name="subTitle">-->
+<!--</form>-->
+<!--팝업:alert_pop - 확인 버튼이 닫기만 되는 기본 팝업-->
+<div class="popup alert_pop_main" style="display: none">
+  <div class="pop_wrap">
+    <button class="pop_close bg_gray" onclick="$('.alert_pop_main').hide()"></button>
+    <div class="inner">
+      <p class="text txt-pop">
+      </p>
+      <div class="btnarea center">
+        <a href="#n" class="red_btn btn-pop" onclick="$('.alert_pop_main').hide()">확인</a>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--팝업:normal_pop - 닫기 버튼 있는 기본 팝업-->
+<div class="popup normal_pop" style="display: none">
+  <div class="pop_wrap">
+    <button class="pop_close bg_gray" onclick="$('.normal_pop').hide()"></button>
+    <div class="inner">
+      <p class="text txt-pop">
+      </p>
+      <div class="btnarea center">
+        <a href="#n" class="red_btn btn-pop">확인</a>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--팝업:static_pop - 닫기 버튼 없는 팝업-->
+<div class="popup static_pop" style="display: none">
+  <div class="pop_wrap">
+    <div class="inner">
+      <p class="text txt-pop">
+      </p>
+      <div class="btnarea center">
+        <a href="#n" class="red_btn btn-pop">확인</a>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<header>
+  <div class="wrap">
+    <a href="#" onclick="return false;" class="btn-mypage mypage">마이페이지</a>
+    <h1 class="logo">
+      <a href="#" onclick="return false;">
+        <img src="/public/img/common/egg_logo.png" alt="eggtv"/>
+      </a>
+    </h1>
+    <div class="utill">
+      <a href="#" onclick="return false;" class="bluetooth btn-bluetooth">에그펜 연결하기</a>
+      <a href="#" onclick="return false;" class="bluetooth btn-bluetooth on">에그펜 연결완료</a>
+      <!-- <a href="#" onclick="return false;" class="membership btn-eggtalk">멤버십</a> -->
+      <a href="#" onclick="return false;" class="search btn-search">검색</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="step_card">
+    <div class="wrap">
+      <div class="swiper card_slide">
+        <!--임시로 첫번째카드에 영어놀이, 두번째카드에 step01~05 (step_type01.html), 세번째카드에 step_plus01~03 (step_type02.html), 네번째카드에 뮤라스토리와 드라마 (step_type03.html), 다섯번째카드에 명작과 위인 (step_type04.html)으로 링크 걸어놨습니다-->
+        <ul class="swiper-wrapper list-banner">
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn01_dailyegg.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn02_play_yellow.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn03_play_red.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn04_eggidol.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn05_yellow.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn06_green.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn07_blue.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn08_yellow+.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn09_green+.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn10_blue+.png' alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide item">
+            <a class="btn-banner" href="#"
+               onclick="return false;"
+            >
+              <img src='/public/img/test/bn11_dp1.png' alt="" />
+            </a>
+          </li>
+<!--          <li class="swiper-slide item inactive">-->
+<!--            <a href="#" onclick="return false;">-->
+<!--              <img src='https://de2tho0n83703.cloudfront.net/eggtv/renew01/btn_main_yellow.png' alt="" />-->
+<!--            </a>-->
+<!--          </li>-->
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="main_statistics">
+    <div class="wrap d_flex">
+      <div class="title_block">
+        <!--3000시간 이상일 경우-->
+        <h5 class="title">
+          <strong class="font_point">3,000</strong>시간을 채우면<br />
+          아이의 일상이<br />
+          영어가 됩니다.
+        </h5>
+        <img class="img_char" src="/public/img/common/img_main_statistics.webp" alt="">
+      </div>
+      <div class="card_box">
+        <article class="inner">
+          <h6 class="inner_title">누적 에그시간 <i class="ico_hint" onclick="showAlert(``)"></i></h6>
+          <div class="box box01">
+            <div class="circle">
+              <!-- data-percent에 따라 그래프가 채워집니다.-->
+              <div class="donut donut01" data-percent="60"></div>
+              <p class="count"><em>818</em> 시간</p>
+            </div>
+          </div>
+        </article>
+        <article class="inner">
+          <h6 class="inner_title">이번 주 에그시간 <i class="ico_hint" onclick="showAlert(``)"></i></h6>
+          <ul class="graph graph01">
+            <li class="box yellow">
+              <div class="division">
+                <p class="name">상위 10%</p>
+                <p class="count">3시간 37분</p>
+              </div>
+              <div class="bar">
+                <span style="width: 20%"></span>
+                <!--MAX:10시간 기준-->
+                <!--width에 따라 그래프가 채워집니다.-->
+              </div>
+            </li>
+            <li class="box orange">
+              <div class="division">
+                <p class="name">우리아이</p>
+                <p class="count ">1시간 10분</p>
+              </div>
+              <div class="bar">
+                <span style="width: 5%"></span>
+                <!--MAX:10시간 기준-->
+                <!--width에 따라 그래프가 채워집니다.-->
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  function showAlert(msg) {
+    $('.alert_pop_main .txt-pop').text(msg);
+    $('.alert_pop_main').show();
+  }
+
+  $(document).ready(function () {
+    // 누적 에그시간 도넛 js
+    let donut01 = $(".donut01")?.attr("data-percent");
+    $(".donut01")?.css({
+      background: `conic-gradient(#f34849 0% ${donut01}%, #efeeec ${donut01}% 100%)`,
+    });
+  });
+</script>
+<script>
+  let startSlidSwiper = function() {
+    let screenRate = window.innerWidth / window.innerHeight;
+    let perView = 1;
+    if (screenRate > 1) {
+      perView = 6.3;
+    } else {
+      perView = 4.5;
+    }
+    var cardSwiper = new Swiper(".card_slide", {
+      slidesPerView: perView,
+      spaceBetween: 0.5,
+      freeMode: true,
+      initialSlide: $("#index").val() - 2,
+    });
+
+    if (screenRate > 1) {
+      perView = 3.1;
+    } else {
+      perView = 2.1;
+    }
+    //영상 슬라이드
+    var videoSwiper = new Swiper(".video_slide", {
+      slidesPerView: perView,
+      spaceBetween: 10,
+      freeMode: true,
+    });
+    if (screenRate > 1) {
+      perView = 5.2;
+    } else {
+      perView = 3.8;
+    }
+    //음원 슬라이드
+    var soundSwiper = new Swiper(".sound_slide", {
+      slidesPerView: perView,
+      spaceBetween: 15,
+      freeMode: true,
+    });
+
+    return true;
+  }
+  $(document).ready(function () {
+    startSlidSwiper();
+    // SaveUserId.postMessage("{{ $email }}");
+    $(window).resize(function(){
+      startSlidSwiper();
+    });
+
+
+  });
+  window.onpageshow = function() {
+    if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+      startSlidSwiper();
+    }
+  }
+</script>
+</body>
+</html>

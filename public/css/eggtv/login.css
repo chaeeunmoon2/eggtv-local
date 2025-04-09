@@ -1,0 +1,393 @@
+body{
+    height: auto;
+    outline: 0;
+}
+.login_page {
+    /*background: #f9f5ec;*/
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_page .logo {
+    margin-top: 1rem;
+    text-align: center;
+}
+.login_page .logo img {
+    display: inline-block;
+    margin-left: 4rem;
+    width: 19rem;
+}
+.login_tab {
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 75rem;
+}
+.login_tab .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #dcdcdc;
+}
+.login_tab .tab > li {
+    width: calc(100% / 3);
+}
+.login_tab .tab > li > button {
+    font-size: 2rem;
+    color: #cacaca;
+    font-weight: 500;
+    display: block;
+    padding: 1.5rem 0;
+    position: relative;
+    width: 100%;
+}
+.login_tab .tab > li.on > button {
+    color: #c9322d;
+}
+.login_tab .tab > li.on > button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+    width: 100%;
+    height: 0.2rem;
+    background: #c9322d;
+}
+.login_tab .tab_contents {
+    display: none;
+}
+.login_tab .tab_contents.current {
+    display: block;
+    padding: 4rem 2rem;
+}
+.login_tab .tab_contents p {
+    font-size: 2rem;
+    color: #777777;
+    text-align: center;
+}
+.login_tab .tab_contents p strong {
+    display: inline-block;
+    color: #353535;
+    font-weight: 500;
+}
+.login_tab .tab_contents .btnarea {
+    margin-top: 6rem;
+}
+.login_tab .tab_contents .btnarea .red_btn {
+    font-size: 2.2rem;
+    padding: 1.5rem 2.5rem 1.8rem 2.5rem;
+    min-width: 25rem;
+    text-align: center;
+}
+.login_close {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    font-size: 0;
+    line-height: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(/img/login/login_close.png) center no-repeat;
+    background-size: 100%;
+}
+.input_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+.input_form .input {
+    width: calc(100% - 16rem);
+}
+.input_form .input input {
+    font-size: 1.8rem;
+    background: #fff;
+    font-weight: 300;
+    border: 1px solid #dcdcdc;
+    padding: 1rem 2rem 1.3rem 2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+.input_form .input input:first-child {
+    margin-top: 0;
+}
+.input_form .input input::placeholder {
+    color: #cbcbcb;
+}
+.input_form .login_btn {
+    display: block;
+    background: #c9322d;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    height: 11.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+}
+.input_form .login_btn em {
+    display: block;
+}
+.input_form .checkbox {
+    width: 100%;
+    margin-top: 2rem;
+}
+.login_tab #regular .btnarea {
+    justify-content: center;
+    margin-top: 4rem;
+}
+.login_tab #regular .btnarea a {
+    font-size: 2rem;
+    color: #3f3f3f;
+    position: relative;
+    padding: 0 2rem;
+}
+.login_tab #regular .btnarea a:first-child:after {
+    content: "";
+    width: 1px;
+    height: 1.8rem;
+    background: #cacaca;
+    position: absolute;
+    right: -0.2rem;
+    top: 0.8rem;
+}
+
+.trial_page {
+    padding-bottom: 5rem;
+    position: relative;
+}
+.trial_page:after {
+  content: "";
+  width: 21rem;
+  height: 31rem;
+  background: url(../img/login/trial_img02.png) center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 4rem;
+  bottom: 2rem;
+  z-index: -1;
+}
+.trial_page .prev_arrow {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+}
+.trial_page .title_wrap {
+    padding: 2rem 0 6rem 0;
+}
+.trial_page .title_wrap .title {
+    justify-content: center;
+    font-family: var(--font-family-ONE-Mobile-pop);
+    display: flex;
+    align-items: center;
+    font-size: 3.4rem;
+    color: #353535;
+    margin-top: 3rem;
+}
+.trial_page .title_wrap .title img {
+    display: block;
+    width: 15rem;
+    margin-right: -2rem;
+    margin-top: -3rem;
+}
+.trial_page .title_wrap .text {
+    color: #797876;
+    font-size: 2.1rem;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 2rem;
+}
+.trial_page .title_wrap .text strong {
+    color: #424242;
+}
+
+.trial_input {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+.trial_input:before {
+    content: "";
+    width: 21rem;
+    height: 31rem;
+    background: url(/img/login/trial_img01.png) center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: -18rem;
+    top: 0;
+}
+.trial_input .inner {
+    background: #fff;
+    padding: 4rem 5rem;
+    border-radius: 3rem;
+}
+.trial_input .inner > div {
+    margin-top: 3rem;
+}
+.trial_input .inner > div:first-child {
+    margin-top: 0;
+}
+.trial_input > div label {
+    font-size: 2rem;
+    color: #171900;
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+.trial_input > div input,
+.trial_input > div select {
+    border: 0.2rem solid #b8b7b5;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+}
+.trial_input > div select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff url(/img/common/select_arrow2.png) right 1.5rem center
+    no-repeat;
+    background-size: 2rem;
+    margin-right: 2rem;
+    width: calc((100% - 3rem) / 2);
+    padding-right: 4rem;
+}
+.trial_input > div select:last-child {
+    margin-right: 0;
+}
+.btn_input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.auth-number-msg, .auth-phone-msg {
+    margin-bottom: 2rem;
+    color: #ec333a;
+    font-size: 1.5rem;
+}
+.btn_input:last-child {
+    margin-bottom: 0;
+}
+.btn_input input {
+    width: calc(100% - 19rem);
+}
+.btn_input a {
+    width: 18rem;
+    text-align: center;
+}
+.btn_input.phone .nation {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.7rem;
+  font-size: 1.5rem;
+  color: #171900;
+  display: block;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.btn_input.phone .nation img {
+    width: 4rem;
+}
+.btn_input.phone input {
+    padding-left: 10rem;
+}
+.agree_input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.trial_input .agree_input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2ede2 url(/img/common/select_arrow2.png) right 1.5rem center
+    no-repeat;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 5rem;
+    width: auto;
+    background-size: 1.2rem;
+    min-width: auto;
+    padding: 1rem 3rem 1rem 1.5rem;
+    margin-left: 2rem;
+}
+.trial_input .btnarea {
+    margin-top: 4rem;
+}
+.trial_input .btnarea a {
+    min-width: 16rem;
+    text-align: center;
+    margin-right: 2rem;
+    font-size: 2.6rem;
+    font-weight: 500;
+    padding: 1rem 2.5rem 1.5rem 2.5rem;
+}
+.trial_input .btnarea a:last-child {
+    margin-right: 0;
+}
+@media (max-height: 450px) {
+  .login_tab {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 65rem;
+  }
+  .login_page .logo img {
+    width: 16rem;
+  }
+  .login_tab .tab_contents.current {
+    padding: 3rem 2rem;
+  }
+  .input_form {
+    width: 85%;
+  }
+  .input_form .input {
+    width: calc(100% - 13rem);
+  }
+  .input_form .login_btn {
+    width: 12rem;
+    height: 11.34rem;
+  }
+  .input_form .input input {
+    margin-top: 0.5rem;
+  }
+  .input_form .checkbox {
+    margin-top: 1rem;
+  }
+  .login_tab #regular .btnarea {
+    margin-top: 3rem;
+  }
+  .trial_input {
+    width: 80%;
+  }
+  .trial_page:after {
+    width: 17rem;
+    height: 24rem;
+    left: 1rem;
+    bottom: 1rem;
+  }
+  .trial_input:before {
+    width: 13rem;
+    height: 22rem;
+    right: -11rem;
+  }
+}
+@media all and (min-height: 667px) and (max-width: 414px) {
+  .login_tab {
+    max-width: 100%;
+  }
+  .trial_input {
+    width: 80%;
+  }
+  .trial_input:before {
+    width: 13rem;
+    right: -11rem;
+  }
+}
