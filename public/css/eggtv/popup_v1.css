@@ -42,7 +42,7 @@
   width: 7rem;
   height: 7rem;
   z-index: 110;
-  background: url(/public/img/common/pop_close.png) center no-repeat;
+  background: url(../../img/common/pop_close.png) center no-repeat;
   background-size: 100%;
   font-size: 0;
   line-height: 0;
@@ -64,7 +64,7 @@
 .video_popup .title span,
 .audio_popup .title span {
   display: inline-block;
-  background: url(/img/common/loop_bg.png) left top 0.8rem no-repeat;
+  background: url(../../img/common/loop_bg.png) left top 0.8rem no-repeat;
   background-size: 5rem;
   padding-left: 6.2rem;
 }
@@ -229,7 +229,7 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background: url(/img/common/help_icon.png) center no-repeat;
+  background: url(../../img/common/help_icon.png) center no-repeat;
   background-size: 100%;
 }
 

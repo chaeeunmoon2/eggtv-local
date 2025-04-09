@@ -83,23 +83,23 @@
 }
 
 .ico_book {
-    background: url(/public/img/common/ico_book.png) center center no-repeat;
+    background: url(../../img/common/ico_book.png) center center no-repeat;
 }
 
 .pink.ico_book {
-    background: url(/public/img/common/ico_book_pink.png) center center no-repeat;
+    background: url(../../img/common/ico_book_pink.png) center center no-repeat;
 }
 
 .ico_tip {
-    background: url(/public/img/common/ico_tip.png) center center no-repeat;
+    background: url(../../img/common/ico_tip.png) center center no-repeat;
 }
 
 .orange.ico_tip {
-    background: url(/public/img/common/ico_tip_orange.png) center center no-repeat;
+    background: url(../../img/common/ico_tip_orange.png) center center no-repeat;
 }
 
 .ico_more {
-    background: url(/public/img/common/ico_more.png) center center no-repeat;
+    background: url(../../img/common/ico_more.png) center center no-repeat;
 }
 
 .ico_plus {
@@ -107,7 +107,7 @@
     top: 0.25em;
     width: 1.3em;
     height: 1.3em;
-    background: url(/public/img/common/ico_plus.png) center center no-repeat;
+    background: url(../../img/common/ico_plus.png) center center no-repeat;
 }
 
 .topic_section .keypoint_box .title {

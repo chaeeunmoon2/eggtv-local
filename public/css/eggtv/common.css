@@ -1094,7 +1094,7 @@ header .utill a.search {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url(/img/common/home_icon.png);
+    background-image: url(../../img/common/home_icon.png);
     margin-left: auto;
 }
 
