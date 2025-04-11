@@ -43,7 +43,7 @@
     font-family: var(--font-family-ONE-Mobile-pop);
     font-size: 2.1rem;
     color: #3ea19a;
-    letter-spacing: -0.05em;
+    /* letter-spacing: -0.05em; */
     margin-bottom: 0.4em;
 }
 
@@ -115,7 +115,7 @@
 .topic_section .keypoint_box .title {
     font-family: var(--font-family-ONE-Mobile-pop);
     font-size: 2.1rem;
-    letter-spacing: -0.05em;
+    /* letter-spacing: -0.05em; */
     margin-bottom: 0.4em;
 }
 
