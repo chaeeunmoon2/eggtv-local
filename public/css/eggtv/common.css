@@ -720,6 +720,10 @@ header .utill a.search {
     margin-top: 1rem;
 }
 
+.bar_header.step_header p strong {
+    font-family: var(--font-family-ONE-Mobile-pop);
+}
+
 .bar_header.step_header p em {
     display: block;
     margin-top: 1rem;
