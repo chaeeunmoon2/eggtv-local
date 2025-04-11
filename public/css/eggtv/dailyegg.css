@@ -13,7 +13,7 @@
 }
 
 .topic_section {
-    background-color: #f8f8f8;
+    background-color: #fdf9f0;
     padding: 9.5rem 0 var(--spacing-section);
 }
 
@@ -40,8 +40,10 @@
 }
 
 .topic_section .topic_box .title {    
+    font-family: var(--font-family-ONE-Mobile-pop);
     font-size: 2.1rem;
-    color: #4c4c4c;
+    color: #3ea19a;
+    letter-spacing: -0.05em;
     margin-bottom: 0.4em;
 }
 
@@ -111,7 +113,9 @@
 }
 
 .topic_section .keypoint_box .title {
+    font-family: var(--font-family-ONE-Mobile-pop);
     font-size: 2.1rem;
+    letter-spacing: -0.05em;
     margin-bottom: 0.4em;
 }
 
@@ -169,8 +173,8 @@
 .step_box .step_label {
     position: relative;
     top: 0.1em;
-    background-color: #544e4b;
-    font-family: var(--font-family-cafe24);
+    background-color: #3ea19a;
+    font-family: var(--font-family-ONE-Mobile-pop);
     font-size: 2rem;
     color: #fff;
     line-height: 1em;
