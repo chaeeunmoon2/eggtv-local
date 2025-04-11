@@ -57,6 +57,30 @@
     url(/fonts/NotoSansKR-Black.woff) format('woff2');
 }
 
+@font-face {
+    font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../../fonts/CookieRun/CookieRun-Black.woff) format('woff'),
+    url(../../fonts/CookieRun/CookieRun-Black.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../../fonts/CookieRun/CookieRun-Bold.woff) format('woff'),
+    url(../../fonts/CookieRun/CookieRun-Bold.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../fonts/CookieRun/CookieRun-Regular.woff) format('woff'),
+    url(../../fonts/CookieRun/CookieRun-Regular.woff) format('woff2');
+}
+
 /* 일본 폰트 - Noto Sans JP, M PLUS 1p */
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap');
 
@@ -79,6 +103,7 @@
     --font-family-noto: "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
     --font-family-myriad-black: "Myriad Pro Black", "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
     --font-family-ONE-Mobile-pop: "ONE-Mobile-POP", "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
+    --font-family-cookieRun: 'CookieRun', "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
 }
 
 body {
@@ -721,7 +746,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header p strong {
-    font-family: var(--font-family-ONE-Mobile-pop);
+    font-family: var(--font-family-cookieRun);
 }
 
 .bar_header.step_header p em {
