@@ -8,7 +8,7 @@ main {
   font-weight: 500;
   display: inline-block;
   color: #353535;
-  background: url(/img/common/title_arrow.png) right center no-repeat;
+  background: url(../../img/common/title_arrow.png) right center no-repeat;
   background-size: 0.8rem;
   padding-right: 2.2rem;
   margin-bottom: 1.3rem;
@@ -156,7 +156,7 @@ body.en .card_box .inner .inner_title { font-size: 1.8rem; }
   display: inline-block;
   width: 1em;
   height: 1em;
-  background: url(/img/common/ico_hint_gray.svg) center center no-repeat;
+  background: url(../../img/common/ico_hint_gray.svg) center center no-repeat;
   background-size: 100%;
   cursor: pointer;
 }
@@ -327,13 +327,13 @@ body.en .main_statistics .graph .box .division { font-size: 1.5rem; }
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
-  background-image: url(/img/common/like_off.png);
+  background-image: url(../../img/common/like_off.png);
   right: 1rem;
   top: 1.5rem;
 }
 .video_slide .info .like.on,
 .sound_slide .info .like.on {
-  background-image: url(/img/common/like_on.png);
+  background-image: url(../../img/common/like_on.png);
 }
 
 .sound_slide > ul {

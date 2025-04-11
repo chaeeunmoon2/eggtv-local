@@ -311,7 +311,7 @@ table caption {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: url("/img/common/check_default.png") center no-repeat;
+    background: url("../../img/common/check_default.png") center no-repeat;
     background-size: 100%;
     position: absolute;
     left: 0;
@@ -321,7 +321,7 @@ table caption {
 }
 
 .checkbox input[type="checkbox"]:checked + label:before {
-    background: url("/img/common/check_on.png") center no-repeat;
+    background: url("../../img/common/check_on.png") center no-repeat;
     background-size: 100%;
 }
 /* input radio */
@@ -347,7 +347,7 @@ table caption {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background: url("/img/common/radio_default.png") center no-repeat;
+    background: url("../../img/common/radio_default.png") center no-repeat;
     background-size: 100%;
     position: absolute;
     left: 0;
@@ -357,7 +357,7 @@ table caption {
 }
 
 .radiobox input[type="checkbox"]:checked + label:before {
-    background: url("/img/common/radio_on.png") center no-repeat;
+    background: url("../../img/common/radio_on.png") center no-repeat;
     background-size: 100%;
 }
 
@@ -483,7 +483,7 @@ header .wrap {
 header .mypage {
     font-size: 0;
     line-height: 0;
-    background: url(/img/common//mypage_icon.png) center no-repeat;
+    background: url(../../img/common//mypage_icon.png) center no-repeat;
     background-size: 100%;
     width: 5rem;
     height: 4rem;
@@ -545,11 +545,11 @@ header .utill a.bluetooth.on {
 }
 
 header .utill a.membership {
-    background-image: url(/img/common/membership.png);
+    background-image: url(../../img/common/membership.png);
 }
 
 header .utill a.search {
-    background-image: url(/img/common/search.png);
+    background-image: url(../../img/common/search.png);
 }
 /*상세페이지 헤더*/
 
@@ -736,7 +736,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step1 .title_block:before {
-    background-image: url(/public/img/common/img_title_step1.png);
+    background-image: url(../../img/common/img_title_step1.png);
 }
 
 .bar_header.step_header.step1:after {
@@ -748,7 +748,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.yellow .title_block:before {
-    background-image: url(/public/img/common/img_title_yellow.png);
+    background-image: url(../../img/common/img_title_yellow.png);
 }
 
 .bar_header.step_header.yellow:after {
@@ -760,7 +760,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step2 .title_block:before {
-    background-image: url(/public/img/common/img_title_step2.png);
+    background-image: url(../../img/common/img_title_step2.png);
 }
 
 .bar_header.step_header.step2:after {
@@ -772,7 +772,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.green .title_block:before {
-    background-image: url(/public/img/common/img_title_green.png);
+    background-image: url(../../img/common/img_title_green.png);
 }
 
 .bar_header.step_header.green:after {
@@ -784,7 +784,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step3 .title_block:before {
-    background-image: url(/public/img/common/img_title_step3.png);
+    background-image: url(../../img/common/img_title_step3.png);
 }
 
 .bar_header.step_header.step3:after {
@@ -796,7 +796,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.blue .title_block:before {
-    background-image: url(/public/img/common/img_title_blue.png);
+    background-image: url(../../img/common/img_title_blue.png);
 }
 
 .bar_header.step_header.blue:after {
@@ -808,7 +808,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step4 .title_block:before {
-    background-image: url(/public/img/common/img_title_step4.png);
+    background-image: url(../../img/common/img_title_step4.png);
 }
 
 .bar_header.step_header.step4:after {
@@ -820,7 +820,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step5 .title_block:before {
-    background-image: url(/public/img/common/img_title_step5.png);
+    background-image: url(../../img/common/img_title_step5.png);
 }
 
 .bar_header.step_header.step5:after {
@@ -833,7 +833,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.dp1 .title_block:before {
-    background-image: url(/public/img/common/img_title_step4.png);
+    background-image: url(../../img/common/img_title_step4.png);
 }
 
 .bar_header.step_header.dp2,
@@ -842,7 +842,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.dp2 .title_block:before {
-    background-image: url(/public/img/common/img_title_step5.png);
+    background-image: url(../../img/common/img_title_step5.png);
 }
 
 .bar_header.step_header.step1_plus p strong,
@@ -860,7 +860,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step1p .title_block:before {
-    background-image: url(/public/img/common/img_title_step1_plus.png);
+    background-image: url(../../img/common/img_title_step1_plus.png);
 }
 
 .bar_header.step_header.step1p:after {
@@ -876,7 +876,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step2p .title_block:before {
-    background-image: url(/public/img/common/img_title_step2_plus.png);
+    background-image: url(../../img/common/img_title_step2_plus.png);
 }
 
 .bar_header.step_header.step3p {
@@ -888,7 +888,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.step3p .title_block:before {
-    background-image: url(/public/img/common/img_title_step3_plus.png);
+    background-image: url(../../img/common/img_title_step3_plus.png);
 }
 
 .bar_header.step_header.yellowp {
@@ -896,7 +896,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.yellowp .title_block:before {
-    background-image: url(/public/img/common/img_title_yellow_plus.png);
+    background-image: url(../../img/common/img_title_yellow_plus.png);
 }
 
 .bar_header.step_header.yellowp:after {
@@ -912,7 +912,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.greenp .title_block:before {
-    background-image: url(/public/img/common/img_title_green_plus.png);
+    background-image: url(../../img/common/img_title_green_plus.png);
 }
 
 .bar_header.step_header.bluep {
@@ -924,7 +924,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.bluep .title_block:before {
-    background-image: url(/public/img/common/img_title_blue_plus.png);
+    background-image: url(../../img/common/img_title_blue_plus.png);
 }
 
 .bar_header.step_header.ms {
@@ -932,7 +932,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.ms .title_block:before {
-    background-image: url(/public/img/common/img_title_mr_story.png);
+    background-image: url(../../img/common/img_title_mr_story.png);
 }
 
 .bar_header.step_header.ms:after {
@@ -944,7 +944,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.md .title_block:before {
-    background-image: url(/public/img/common/img_title_mr_drama.png);
+    background-image: url(../../img/common/img_title_mr_drama.png);
 }
 
 .bar_header.step_header.md:after {
@@ -956,7 +956,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.ftts .title_block:before {
-    background-image: url(/public/img/common/img_title_ftts.png);
+    background-image: url(../../img/common/img_title_ftts.png);
 }
 
 .bar_header.step_header.ftts:after {
@@ -968,7 +968,7 @@ header .utill a.search {
 }
 
 .bar_header.step_header.wtwy .title_block:before {
-    background-image: url(/public/img/common/img_title_wtwy.png);
+    background-image: url(../../img/common/img_title_wtwy.png);
 }
 
 .bar_header.step_header.wtwy:after {
@@ -999,7 +999,7 @@ header .utill a.search {
 
 .bar_header.step_header.eng_play:before {
     background-color: #ffd502;
-    background-image: url(/public/img/common/eng_play_bg.png);
+    background-image: url(../../img/common/eng_play_bg.png);
     background-size: 25rem;
     background-position: right 4rem bottom 0;
     height: 100%;
@@ -1016,7 +1016,7 @@ header .utill a.search {
 
 .bar_header.step_header.step_play:before {
     background-color: #F34849;
-    background-image: url(/public/img/common/step14_bg.png);
+    background-image: url(../../img/common/step14_bg.png);
     background-size: 17rem;
     background-position: right 4rem bottom 0;
     height: 100%;
@@ -1105,18 +1105,18 @@ header .utill a.search {
     line-height: 0;
     width: 4.5rem;
     height: 5rem;
-    background: url(/public/img/common/arrow_white.png) center no-repeat;
+    background: url(../../img/common/arrow_white.png) center no-repeat;
     background-size: 100%;
     display: inline-block;
 }
 
 .prev_arrow.brown {
-    background-image: url(/img/common/arrow_brown.png);
+    background-image: url(../../img/common/arrow_brown.png);
     background-size: 100%;
 }
 
 .prev_arrow.light_brown {
-    background-image: url(/img/common/arrow_light_brown.png);
+    background-image: url(../../img/common/arrow_light_brown.png);
     background-size: 100%;
 }
 
@@ -1148,7 +1148,7 @@ header .utill a.search {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: #fff url(/img/common/select_arrow.png) right 1.5rem center
+    background: #fff url(../../img/common/select_arrow.png) right 1.5rem center
     no-repeat;
     background-size: 1.5rem;
     min-width: 20rem;
@@ -1168,7 +1168,7 @@ header .utill a.search {
 .search_section {
     min-height: 100vh;
     height: auto;
-    background: #fffbf2 url(/img/common/search_bg.jpg) right 5rem bottom
+    background: #fffbf2 url(../../img/common/search_bg.jpg) right 5rem bottom
     no-repeat;
     background-size: 55rem;
 }
@@ -1229,7 +1229,7 @@ header .utill a.search {
     line-height: 0;
     width: 4rem;
     height: 5rem;
-    background: url(/img/common/search_icon.png) center no-repeat;
+    background: url(../../img/common/search_icon.png) center no-repeat;
     background-size: 100%;
     position: absolute;
     right: 1rem;
@@ -1274,7 +1274,7 @@ header .utill a.search {
     line-height: 0;
     width: 1.5rem;
     height: 1.5rem;
-    background: url(/img/common/del_icon.png) center no-repeat;
+    background: url(../../img/common/del_icon.png) center no-repeat;
     background-size: 100%;
     display: inline-block;
     cursor: pointer;
@@ -1371,11 +1371,11 @@ header .utill a.search {
 }
 
 .play_btn_area a.play_btn01 {
-    background-image: url(/img/common/loop_icon01.png);
+    background-image: url(../../img/common/loop_icon01.png);
 }
 
 .play_btn_area a.play_btn02 {
-    background-image: url(/img/common/loop_icon02.png);
+    background-image: url(../../img/common/loop_icon02.png);
     margin-top: 1.5rem;
 }
 
