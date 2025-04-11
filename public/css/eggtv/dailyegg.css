@@ -167,6 +167,7 @@
 }
 
 .step_box .title_block .title {
+    font-family: var(--font-family-ONE-Mobile-pop);
     font-size: 2.4rem;
 }
 
