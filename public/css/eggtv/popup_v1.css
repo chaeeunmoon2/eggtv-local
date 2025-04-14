@@ -300,13 +300,6 @@
   display: block;
 }
 
-@media (orientation: horizontal) {
-  .layer_fullscreen {
-    max-width: 100%;
-    min-height: 100vw;
-  }
-}
-
 @media (max-width: 1800px) {
   .alert_pop {
     width: calc(100% - 30rem);
