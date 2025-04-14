@@ -29,32 +29,32 @@
     font-family: "Myriad Pro Black";
     font-style: normal;
     font-weight: 900;
-    src: url(/fonts/MyriadPro-Black.woff) format('woff'),
-    url(/fonts/MyriadPro-Black.woff2) format('woff2');
+    src: url(../../fonts/MyriadPro-Black.woff) format('woff'),
+    url(../../fonts/MyriadPro-Black.woff2) format('woff2');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    src: url(/fonts/NotoSansKR-Regular.woff) format('woff'),
-    url(/fonts/NotoSansKR-Regular.woff2) format('woff2');
+    src: url(../../fonts/NotoSansKR-Regular.woff) format('woff'),
+    url(../../fonts/NotoSansKR-Regular.woff2) format('woff2');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/NotoSansKR-Bold.woff) format('woff'),
-    url(/fonts/NotoSansKR-Bold.woff) format('woff2');
+    src: url(../../fonts/NotoSansKR-Bold.woff) format('woff'),
+    url(../../fonts/NotoSansKR-Bold.woff) format('woff2');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 900;
-    src: url(/fonts/NotoSansKR-Black.woff) format('woff'),
-    url(/fonts/NotoSansKR-Black.woff) format('woff2');
+    src: url(../../fonts/NotoSansKR-Black.woff) format('woff'),
+    url(../../fonts/NotoSansKR-Black.woff) format('woff2');
 }
 
 /* 쿠키런 */
