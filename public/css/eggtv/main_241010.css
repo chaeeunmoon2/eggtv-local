@@ -23,10 +23,10 @@ main {
 .suggestion_video,
 .favorite_video,
 .favorite_sound {
-  margin-top: 5rem;
+  margin-top:2.5rem;
 }
 .step_card {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 .card_slide,
 .video_slide > ul {
