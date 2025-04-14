@@ -300,7 +300,7 @@
   display: block;
 }
 
-@media (orientation: horizontal) {
+@media (orientation: landscape) {
   .layer_fullscreen {
     max-width: 100vh;
     min-height: 100vw;
