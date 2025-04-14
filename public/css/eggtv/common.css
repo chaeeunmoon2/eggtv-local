@@ -57,6 +57,7 @@
     url(/fonts/NotoSansKR-Black.woff) format('woff2');
 }
 
+/* 쿠키런 */
 @font-face {
     font-family: 'CookieRun';
     font-style: normal;
@@ -104,6 +105,10 @@
     --font-family-myriad-black: "Myriad Pro Black", "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
     --font-family-ONE-Mobile-pop: "ONE-Mobile-POP", "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
     --font-family-cookieRun: 'CookieRun', "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
+}
+
+.font_cookierun {
+    font-family: var(--font-family-cookieRun);
 }
 
 body {
@@ -747,6 +752,7 @@ header .utill a.search {
 
 .bar_header.step_header p strong {
     font-family: var(--font-family-cookieRun);
+    font-weight: 600;
 }
 
 .bar_header.step_header p em {

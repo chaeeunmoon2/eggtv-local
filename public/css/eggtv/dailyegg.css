@@ -1,5 +1,8 @@
 .daily_egg_page {
     --spacing-section: 4em;
+    max-width: 100vw;
+    background-color: #fff;
+    overflow-x: hidden;
 }
 
 .bar_header.step_header.daily_egg {
@@ -148,7 +151,7 @@
     justify-content: space-between;
 }
 
-.division { background-color: #dcdcdc; height: 1px; border: 0; margin: 3rem 0; }
+.daily_egg_page .division { background-color: #dcdcdc; height: 1px; border: 0; margin: 3rem 0; }
 
 .step_section {
     background-color: #fff;
@@ -253,6 +256,7 @@
 
 .sound_section {
     padding: var(--spacing-section) 0;
+    background-color: #fff4de;
 }
 
 .sound_grid {
