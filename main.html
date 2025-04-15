@@ -74,6 +74,533 @@
   </div>
   <div class="shadow"></div>
 </div>
+<!--S:데일리에그-->
+<div class="layer_fullscreen show" id="layer_dailyegg">
+  <div class="daily_egg_page">
+    <div class="fixed_header">
+      <div class="bar_header step_header daily_egg scroll">
+        <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
+        <div class="wrap">
+          <button onclick="$('#layer_dailyegg').removeClass('show')" class="home_btn left" data-index="">HOME</button>
+          <p><!--여기 텍스트도 맞게 변경해야합니다!!-->
+            <strong>Daily EGG</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--S:content-->
+    <div class="content">
+      <!--S:topic section-->
+      <section class="topic_section">
+        <div class="wrap">
+          <div class="thumb_block">
+            <img src="./public/img/test/img_dailyegg_topic.png" alt="오늘 주제 썸네일">
+          </div>
+          <div class="desc_block">
+            <!--S:오늘의 주제-->
+            <div class="topic_box">
+              <h2 class="title">2월 15일 오늘의 주제</h2>
+              <p class="desc">
+                남의 것을 부러워하기보다 자신이 가진 것을 소중히 여겨야해요.
+                더 나아가 양보하고 도와준다면 더 좋겠죠?
+              </p>
+              <div class="btn_area">
+                <button class="btn_topic pink" onclick="$('#storyPopup').show()"><i class="ico ico_book"></i> Story</button>
+                <button class="btn_topic orange" onclick="$('#tipPopup').show()"><i class="ico ico_tip"></i> Play Tip</button>
+              </div>
+            </div>
+            <!--E:오늘의 주제-->
+            <hr class="division" />
+            <!--S:Key Point-->
+            <div class="keypoint_box">
+              <div class="title_flex">
+                <h2 class="title">Today's Key Point</h2>
+                <button class="btn_more" onclick="$('#keypointPopup').show()">more <i class="ico ico_more"></i></button>
+              </div>
+              <p class="desc">
+                규칙은 사회를 유지하고, 사람들이 조화롭게 살아가는데 필수적이죠.
+                아이가 규칙을 지킬 때 이유를 설명하고, 규칙을 어떻게 지켜해야지 알려...
+                규칙은 사회를 유지하고, 사람들이 조화롭게 살아가는데 필수적이죠.
+                아이가 규칙을 지킬 때 이유를 설명하고, 규칙을 어떻게 지켜해야지 알려...
+                규칙은 사회를 유지하고, 사람들이 조화롭게 살아가는데 필수적이죠.
+                아이가 규칙을 지킬 때 이유를 설명하고, 규칙을 어떻게 지켜해야지 알려...
+              </p>
+            </div>
+            <!--E:Key Point-->
+          </div>
+        </div>
+      </section>
+      <!--E:topic section-->
+      <!--S:step section-->
+      <section class="step_section">
+        <div class="wrap">
+          <!--S:스토리북-->
+          <div class="step_box">
+            <div class="title_block">
+              <span class="step_label">Step1</span>
+              <h3 class="title"><span class="font_red">스토리북</span>을 꺼내고 함께 탐색해요.</h3>
+            </div>
+            <div class="storybook_box">
+              <div class="img_book">
+                <img src="./public/img/thumnail/book02.png" alt="">
+              </div>
+              <p class="desc">
+                Who Is it? 스토라북을 꺼내주세요. <br />
+                아이가 에그펜으러 찍으며 책을 볼 수 있도록 옆에서 지켜봐 주세요.
+              </p>
+            </div>
+          </div>
+          <!--E:스토리북-->
+          <!--S:영상-->
+          <div class="step_box">
+            <div class="title_block">
+              <span class="step_label">Step2</span>
+              <h3 class="title"><span class="font_red">영상</span>으로 오늘의 핵심 표현을 익혀요.</h3>
+            </div>
+            <div class="list_block">
+              <div class="swiper video_slide">
+                <ul class="swiper-wrapper list-vod">
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <div class="lock_layer">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 10%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Animation</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <!--show 클래스 추가시 보임-->
+                        <div class="lock_layer show">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 0%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Jimmy&Tracy</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <div class="lock_layer show">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 10%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Ellie’s Storytelling</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--E:영상-->
+          <!--S:Plus-->
+          <div class="step_box">
+            <div class="title_block">
+              <span class="step_label">Step3</span>
+              <h3 class="title">Plus 콘텐츠로 <span class="font_red">어휘와 표현을 확장</span>할 수 있어요.</h3>
+            </div>
+            <div class="list_block">
+              <div class="swiper video_slide">
+                <ul class="swiper-wrapper list-vod">
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <div class="lock_layer">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 10%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Animation</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <div class="lock_layer show">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 0%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Plus Storytelling</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--E:Plus-->
+          <!--S:연계 콘텐츠-->
+          <div class="step_box">
+            <div class="title_block">
+              <span class="step_label">Step4</span>
+              <h3 class="title">연계 콘텐츠를 통해 <span class="font_red">반복해서 접하고 응용</span>해요.</h3>
+            </div>
+            <div class="list_block">
+              <div class="swiper video_slide">
+                <ul class="swiper-wrapper list-vod">
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <div class="lock_layer">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 10%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Animation</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <div class="lock_layer show">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 0%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Sitcom</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide item">
+                    <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
+                      data-type="vod">
+                      <div class="thumnail">
+                        <div class="lock_layer show">
+                          <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
+                          <p class="msg">
+                            Plus 멤버십에서 <br />
+                            추가 오픈!
+                          </p>
+                        </div>
+                        <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
+                          alt="" id="vod-yellow_01_dra" loading="lazy" />
+                        <div class="video_progress">
+                          <span class="bar" style="width: 0%"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <p class="title">Song&Dance</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--E:연계 콘텐츠-->
+        </div>
+      </section>
+      <!--E:step section-->
+      <!--S:흘려듣기-->
+      <section class="sound_section">
+        <div class="wrap">
+          <!--S:step box-->  
+          <div class="step_box">
+            <div class="title_block">
+              <h3 class="title"><i class="ico ico_plus"></i> 오늘 익힌 표현은 <span class="font_red">흘려듣기</span>로 노출을 극대화해주세요.</h3>
+            </div>
+          </div>
+          <!--E:step box-->
+          <div class="list_block">
+            <ul class="sound_slide sound_grid">
+              <li class="item">
+                <a href="">
+                  <div class="thumnail">
+                    <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/audio/YELLOW/yellow_01_dr_main.png" alt="Who Is It?" ismember="undefined" id="bookmarkAudio-yellow_01_dra">
+                  </div>    
+                  <div class="info">
+                    <p class="title">
+                        <span class="logo">
+                            <img class="image-logo" src="https://content.englishegg.co.kr/eggtv/renew01/text_audio_title_yellow.png" alt="스탭로고">
+                        </span>
+                        Who Is It?
+                    </p>
+                    <p class="category">Drama</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item">
+                <a href="">
+                  <div class="thumnail">
+                    <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/audio/YELLOW/yellow_01_dr_main.png" alt="Who Is It?" ismember="undefined" id="bookmarkAudio-yellow_01_dra">
+                  </div>    
+                  <div class="info">
+                    <p class="title">
+                        <span class="logo">
+                            <img class="image-logo" src="https://content.englishegg.co.kr/eggtv/renew01/text_audio_title_yellow.png" alt="스탭로고">
+                        </span>
+                        Who Is It?
+                    </p>
+                    <p class="category">Drama</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>    
+      </section>
+      <!--E:흘려듣기-->
+    </div>
+    <!--E:content-->
+  </div>
+  <!--팝업 S:normal_pop - 닫기 버튼 있는 기본 팝업-->
+<div class="popup normal_pop alert_upgrade" style="display: none">
+  <div class="pop_wrap">
+    <button class="pop_close bg_gray" onclick="$('.alert_upgrade').hide()"></button>
+    <div class="inner">
+      <p class="text txt-pop lg">
+        Plus 멤버십 업그레이드 시<br />
+        시청 가능합니다.
+      </p>
+      <div class="btnarea center">
+        <!--나중에 링크 설정-->
+        <a href="#n" class="red_btn btn-pop">자세히 보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--팝업 E:normal_pop - 닫기 버튼 있는 기본 팝업-->
+<!--S:story popup-->
+<div class="popup normal_pop" id="storyPopup" style="display: none">
+  <div class="pop_wrap">
+    <button class="pop_close bg_gray" onclick="$('.normal_pop').hide()"></button>
+    <div class="inner">
+      <p class="title left pink font_cookierun"><i class="ico ico_book pink"></i> Story</p>
+      <div class="scroll_content">
+        <p>
+          dkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfok
+          dkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfok
+          dkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+
+          dfsdkfpekpfok
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--E:story popup-->
+<!--S:play tip popup-->
+<div class="popup normal_pop" id="tipPopup" style="display: none">
+  <div class="pop_wrap">
+    <button class="pop_close bg_gray" onclick="$('.normal_pop').hide()"></button>
+    <div class="inner">
+      <p class="title left orange font_cookierun"><i class="ico ico_tip orange"></i> Play Tip</p>
+      <div class="scroll_content">
+        <p>
+          dkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--E:play tip popup-->
+<!--S:keypoint popup-->
+<div class="popup normal_pop" id="keypointPopup" style="display: none">
+  <div class="pop_wrap">
+    <button class="pop_close bg_gray" onclick="$('.normal_pop').hide()"></button>
+    <div class="inner">
+      <p class="title left font_cookierun">Today's Key Point</p>
+      <div class="scroll_content">
+        <p>
+          dkfodskfpsdkfposdkfpkdpfokdpskf
+          dofkopskfpskdkdfpkdspf
+          eokfoekfpokes
+          foekfopsefkse
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--E:keypoint popup-->
+</div>
+<script>
+  $(document).ready(function () {
+    
+    // .lock_layer 클릭 시 알럿 표시
+    $(".lock_layer").click(function(){
+      $('.alert_upgrade').show();
+    });
+
+
+    let screenRate = window.innerWidth / window.innerHeight;
+    var dailyEggSwiper = new Swiper(".daily_egg_page .video_slide", {
+      slidesPerView: 3,
+      spaceBetween: 15,
+      freeMode: true,
+      415: {
+        slidesPerView: 3.1,
+      },
+    });
+  });
+</script>
+<!--E:데일리에그-->
 <header>
   <div class="wrap">
     <a href="#" onclick="return false;" class="btn-mypage mypage">마이페이지</a>
@@ -235,533 +762,6 @@
       </div>
     </div>
   </section>
-  <!--S:데일리에그-->
-  <div class="layer_fullscreen show" id="layer_dailyegg">
-    <div class="daily_egg_page">
-      <div class="fixed_header">
-        <div class="bar_header step_header daily_egg scroll">
-          <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
-          <div class="wrap">
-            <button onclick="$('#layer_dailyegg').removeClass('show')" class="home_btn left" data-index="">HOME</button>
-            <p><!--여기 텍스트도 맞게 변경해야합니다!!-->
-              <strong>Daily EGG</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--S:content-->
-      <div class="content">
-        <!--S:topic section-->
-        <section class="topic_section">
-          <div class="wrap">
-            <div class="thumb_block">
-              <img src="./public/img/test/img_dailyegg_topic.png" alt="오늘 주제 썸네일">
-            </div>
-            <div class="desc_block">
-              <!--S:오늘의 주제-->
-              <div class="topic_box">
-                <h2 class="title">2월 15일 오늘의 주제</h2>
-                <p class="desc">
-                  남의 것을 부러워하기보다 자신이 가진 것을 소중히 여겨야해요.
-                  더 나아가 양보하고 도와준다면 더 좋겠죠?
-                </p>
-                <div class="btn_area">
-                  <button class="btn_topic pink" onclick="$('#storyPopup').show()"><i class="ico ico_book"></i> Story</button>
-                  <button class="btn_topic orange" onclick="$('#tipPopup').show()"><i class="ico ico_tip"></i> Play Tip</button>
-                </div>
-              </div>
-              <!--E:오늘의 주제-->
-              <hr class="division" />
-              <!--S:Key Point-->
-              <div class="keypoint_box">
-                <div class="title_flex">
-                  <h2 class="title">Today's Key Point</h2>
-                  <button class="btn_more" onclick="$('#keypointPopup').show()">more <i class="ico ico_more"></i></button>
-                </div>
-                <p class="desc">
-                  규칙은 사회를 유지하고, 사람들이 조화롭게 살아가는데 필수적이죠.
-                  아이가 규칙을 지킬 때 이유를 설명하고, 규칙을 어떻게 지켜해야지 알려...
-                  규칙은 사회를 유지하고, 사람들이 조화롭게 살아가는데 필수적이죠.
-                  아이가 규칙을 지킬 때 이유를 설명하고, 규칙을 어떻게 지켜해야지 알려...
-                  규칙은 사회를 유지하고, 사람들이 조화롭게 살아가는데 필수적이죠.
-                  아이가 규칙을 지킬 때 이유를 설명하고, 규칙을 어떻게 지켜해야지 알려...
-                </p>
-              </div>
-              <!--E:Key Point-->
-            </div>
-          </div>
-        </section>
-        <!--E:topic section-->
-        <!--S:step section-->
-        <section class="step_section">
-          <div class="wrap">
-            <!--S:스토리북-->
-            <div class="step_box">
-              <div class="title_block">
-                <span class="step_label">Step1</span>
-                <h3 class="title"><span class="font_red">스토리북</span>을 꺼내고 함께 탐색해요.</h3>
-              </div>
-              <div class="storybook_box">
-                <div class="img_book">
-                  <img src="./public/img/thumnail/book02.png" alt="">
-                </div>
-                <p class="desc">
-                  Who Is it? 스토라북을 꺼내주세요. <br />
-                  아이가 에그펜으러 찍으며 책을 볼 수 있도록 옆에서 지켜봐 주세요.
-                </p>
-              </div>
-            </div>
-            <!--E:스토리북-->
-            <!--S:영상-->
-            <div class="step_box">
-              <div class="title_block">
-                <span class="step_label">Step2</span>
-                <h3 class="title"><span class="font_red">영상</span>으로 오늘의 핵심 표현을 익혀요.</h3>
-              </div>
-              <div class="list_block">
-                <div class="swiper video_slide">
-                  <ul class="swiper-wrapper list-vod">
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <div class="lock_layer">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 10%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Animation</p>
-                      </div>
-                    </li>
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <!--show 클래스 추가시 보임-->
-                          <div class="lock_layer show">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 0%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Jimmy&Tracy</p>
-                      </div>
-                    </li>
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <div class="lock_layer show">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 10%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Ellie’s Storytelling</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!--E:영상-->
-            <!--S:Plus-->
-            <div class="step_box">
-              <div class="title_block">
-                <span class="step_label">Step3</span>
-                <h3 class="title">Plus 콘텐츠로 <span class="font_red">어휘와 표현을 확장</span>할 수 있어요.</h3>
-              </div>
-              <div class="list_block">
-                <div class="swiper video_slide">
-                  <ul class="swiper-wrapper list-vod">
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <div class="lock_layer">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 10%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Animation</p>
-                      </div>
-                    </li>
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <div class="lock_layer show">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 0%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Plus Storytelling</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!--E:Plus-->
-            <!--S:연계 콘텐츠-->
-            <div class="step_box">
-              <div class="title_block">
-                <span class="step_label">Step4</span>
-                <h3 class="title">연계 콘텐츠를 통해 <span class="font_red">반복해서 접하고 응용</span>해요.</h3>
-              </div>
-              <div class="list_block">
-                <div class="swiper video_slide">
-                  <ul class="swiper-wrapper list-vod">
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <div class="lock_layer">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 10%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Animation</p>
-                      </div>
-                    </li>
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <div class="lock_layer show">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 0%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Sitcom</p>
-                      </div>
-                    </li>
-                    <li class="swiper-slide item">
-                      <a href="#" onclick="return false;" class="item-contents" data-vod_code="yellow_01_dra"
-                        data-type="vod">
-                        <div class="thumnail">
-                          <div class="lock_layer show">
-                            <img class="ico_lock" src="./public/img/common/ico_lock.png" alt="">
-                            <p class="msg">
-                              Plus 멤버십에서 <br />
-                              추가 오픈!
-                            </p>
-                          </div>
-                          <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
-                            alt="" id="vod-yellow_01_dra" loading="lazy" />
-                          <div class="video_progress">
-                            <span class="bar" style="width: 0%"></span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="info">
-                        <p class="title">Song&Dance</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!--E:연계 콘텐츠-->
-          </div>
-        </section>
-        <!--E:step section-->
-        <!--S:흘려듣기-->
-        <section class="sound_section">
-          <div class="wrap">
-            <!--S:step box-->  
-            <div class="step_box">
-              <div class="title_block">
-                <h3 class="title"><i class="ico ico_plus"></i> 오늘 익힌 표현은 <span class="font_red">흘려듣기</span>로 노출을 극대화해주세요.</h3>
-              </div>
-            </div>
-            <!--E:step box-->
-            <div class="list_block">
-              <ul class="sound_slide sound_grid">
-                <li class="item">
-                  <a href="">
-                    <div class="thumnail">
-                      <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/audio/YELLOW/yellow_01_dr_main.png" alt="Who Is It?" ismember="undefined" id="bookmarkAudio-yellow_01_dra">
-                    </div>    
-                    <div class="info">
-                      <p class="title">
-                          <span class="logo">
-                              <img class="image-logo" src="https://content.englishegg.co.kr/eggtv/renew01/text_audio_title_yellow.png" alt="스탭로고">
-                          </span>
-                          Who Is It?
-                      </p>
-                      <p class="category">Drama</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="item">
-                  <a href="">
-                    <div class="thumnail">
-                      <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/audio/YELLOW/yellow_01_dr_main.png" alt="Who Is It?" ismember="undefined" id="bookmarkAudio-yellow_01_dra">
-                    </div>    
-                    <div class="info">
-                      <p class="title">
-                          <span class="logo">
-                              <img class="image-logo" src="https://content.englishegg.co.kr/eggtv/renew01/text_audio_title_yellow.png" alt="스탭로고">
-                          </span>
-                          Who Is It?
-                      </p>
-                      <p class="category">Drama</p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>    
-        </section>
-        <!--E:흘려듣기-->
-      </div>
-      <!--E:content-->
-    </div>
-    <!--팝업 S:normal_pop - 닫기 버튼 있는 기본 팝업-->
-  <div class="popup normal_pop alert_upgrade" style="display: none">
-    <div class="pop_wrap">
-      <button class="pop_close bg_gray" onclick="$('.alert_upgrade').hide()"></button>
-      <div class="inner">
-        <p class="text txt-pop lg">
-          Plus 멤버십 업그레이드 시<br />
-          시청 가능합니다.
-        </p>
-        <div class="btnarea center">
-          <!--나중에 링크 설정-->
-          <a href="#n" class="red_btn btn-pop">자세히 보기</a>
-        </div>
-      </div>
-    </div>
-    <div class="shadow"></div>
-  </div>
-  <!--팝업 E:normal_pop - 닫기 버튼 있는 기본 팝업-->
-  <!--S:story popup-->
-  <div class="popup normal_pop" id="storyPopup" style="display: none">
-    <div class="pop_wrap">
-      <button class="pop_close bg_gray" onclick="$('.normal_pop').hide()"></button>
-      <div class="inner">
-        <p class="title left pink font_cookierun"><i class="ico ico_book pink"></i> Story</p>
-        <div class="scroll_content">
-          <p>
-            dkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfok
-            dkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfok
-            dkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfokdkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-
-            dfsdkfpekpfok
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="shadow"></div>
-  </div>
-  <!--E:story popup-->
-  <!--S:play tip popup-->
-  <div class="popup normal_pop" id="tipPopup" style="display: none">
-    <div class="pop_wrap">
-      <button class="pop_close bg_gray" onclick="$('.normal_pop').hide()"></button>
-      <div class="inner">
-        <p class="title left orange font_cookierun"><i class="ico ico_tip orange"></i> Play Tip</p>
-        <div class="scroll_content">
-          <p>
-            dkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="shadow"></div>
-  </div>
-  <!--E:play tip popup-->
-  <!--S:keypoint popup-->
-  <div class="popup normal_pop" id="keypointPopup" style="display: none">
-    <div class="pop_wrap">
-      <button class="pop_close bg_gray" onclick="$('.normal_pop').hide()"></button>
-      <div class="inner">
-        <p class="title left font_cookierun">Today's Key Point</p>
-        <div class="scroll_content">
-          <p>
-            dkfodskfpsdkfposdkfpkdpfokdpskf
-            dofkopskfpskdkdfpkdspf
-            eokfoekfpokes
-            foekfopsefkse
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="shadow"></div>
-  </div>
-  <!--E:keypoint popup-->
-  </div>
-  <script>
-    $(document).ready(function () {
-      
-      // .lock_layer 클릭 시 알럿 표시
-      $(".lock_layer").click(function(){
-        $('.alert_upgrade').show();
-      });
-  
-  
-      let screenRate = window.innerWidth / window.innerHeight;
-      var dailyEggSwiper = new Swiper(".daily_egg_page .video_slide", {
-        slidesPerView: 3,
-        spaceBetween: 15,
-        freeMode: true,
-        415: {
-          slidesPerView: 3.1,
-        },
-      });
-    });
-  </script>
-  <!--E:데일리에그-->
 </main>
 <script>
   function showAlert(msg) {
@@ -782,7 +782,7 @@
     let screenRate = window.innerWidth / window.innerHeight;
     let perView = 1;
     if (screenRate > 1) {
-      perView = 6.7;
+      perView = 6.5;
     } else {
       perView = 4.5;
     }

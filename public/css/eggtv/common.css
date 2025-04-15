@@ -62,24 +62,21 @@
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 900;
-    src: url(../../fonts/CookieRun/CookieRun-Black.woff) format('woff'),
-    url(../../fonts/CookieRun/CookieRun-Black.woff) format('woff2');
+    src: url(../../fonts/CookieRun/CookieRun-Black.woff) format('woff');
 }
 
 @font-face {
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 600;
-    src: url(../../fonts/CookieRun/CookieRun-Bold.woff) format('woff'),
-    url(../../fonts/CookieRun/CookieRun-Bold.woff) format('woff2');
+    src: url(../../fonts/CookieRun/CookieRun-Bold.woff) format('woff');
 }
 
 @font-face {
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 400;
-    src: url(../../fonts/CookieRun/CookieRun-Regular.woff) format('woff'),
-    url(../../fonts/CookieRun/CookieRun-Regular.woff) format('woff2');
+    src: url(../../fonts/CookieRun/CookieRun-Regular.woff) format('woff');
 }
 
 /* 일본 폰트 - Noto Sans JP, M PLUS 1p */
@@ -748,11 +745,6 @@ header .utill a.search {
     font-weight: 900;
     line-height: 0.9;
     margin-top: 1rem;
-}
-
-.bar_header.step_header p strong {
-    font-family: var(--font-family-cookieRun);
-    font-weight: 600;
 }
 
 .bar_header.step_header p em {

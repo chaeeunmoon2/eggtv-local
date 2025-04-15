@@ -5,6 +5,11 @@
     overflow-x: hidden;
 }
 
+.daily_egg_page .bar_header.step_header p strong {
+    font-family: var(--font-family-cookieRun);
+    font-weight: 600;
+}
+
 .bar_header.step_header.daily_egg {
     padding: 1rem 0;
 }
@@ -47,7 +52,6 @@
     font-size: 2.1rem;
     color: #3ea19a;
     font-weight: 600;
-    /* letter-spacing: -0.05em; */
     margin-bottom: 0.4em;
 }
 
