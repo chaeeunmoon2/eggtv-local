@@ -30,37 +30,10 @@
 <!--<input type="hidden" name="token" id="token" value="{{ $token }}" />-->
 <!--<input type="hidden" name="step" id="step" value="{{ $step }}" />-->
 <section class="step_page">
-  <!--비디오 연속재생 팝업-->
-  <div class="popup video_popup">
-    <div class="pop_wrap">
-      <div class="inner">
-        <p class="title"><span>어떤 비디오부터 재생하시겠어요?</span></p>
-        <ul class="video_thumnail list-vod">
-        </ul>
-      </div>
-      <button class="pop_close">팝업닫기</button>
-    </div>
-    <div class="shadow"></div>
-  </div>
-  <!--//비디오 연속재생 팝업-->
-
-  <!--오디오 연속재생 팝업-->
-  <div class="popup audio_popup">
-    <div class="pop_wrap">
-      <div class="inner">
-        <p class="title"><span>어떤 오디오부터 재생하시겠어요?</span></p>
-        <ul class="video_thumnail list-audio">
-        </ul>
-      </div>
-      <button class="pop_close">팝업닫기</button>
-    </div>
-    <div class="shadow"></div>
-  </div>
-  <!--//오디오 연속재생 팝업-->
 
   <!--step01~05-->
   <div class="move_header">
-    <div class="bar_header step_header yellow normal">
+    <div class="bar_header step_header yellow normal" style="background-color: #fdd000;">
       <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
       <div class="wrap block">
         <!-- <a href="/eggtv/app/main?index={{ $index }}" class="prev_arrow">이전페이지</a> -->
@@ -72,7 +45,7 @@
           </p>
         </div>
         <!--S:모음 버튼-->
-        <article class="play_btn_block">
+        <!-- <article class="play_btn_block">
           <div class="play_btn_box">
             <h4 class="title">VIDEO</h4>
             <ul class="play_btn_list">
@@ -89,12 +62,12 @@
               <li class="play_btn btn_video_pop">Drama모음</li>
             </ul>
           </div>
-        </article>
+        </article> -->
         <!--E:모음 버튼-->
       </div>
-      
+      <img class="step_char" src="./public/img/common/img_title_yellow.png" alt="">
     </div>
-    <div class="bar_header step_header yellow scroll"> <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
+    <div class="bar_header step_header yellow scroll" style="background-color: #fdd000;"> <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
       <div class="wrap">
         <!-- <a href="/eggtv/app/main?index={{ $index }}" class="prev_arrow">이전페이지</a> -->
         <a href="#" onclick="return false;" class="prev_arrow">이전페이지</a>
@@ -189,22 +162,4 @@
   </div>
 </section>
 </body>
-<script>
-  $(document).ready(function () {
-    //비디오 영상팝업 오픈
-    $(".btn_video_pop").on("click", function () {
-      $(".video_popup").show();
-    });
-    $(".video_popup .pop_close").on("click", function () {
-      $(".video_popup").hide();
-    });
-    //오디오 영상팝업 오픈
-    $(".btn_audio_pop").on("click", function () {
-      $(".audio_popup").show();
-    });
-    $(".audio_popup .pop_close").on("click", function () {
-      $(".audio_popup").hide();
-    });
-  });
-</script>
 </html>

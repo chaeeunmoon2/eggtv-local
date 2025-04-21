@@ -263,16 +263,18 @@
     background-color: #fff4de;
 }
 
-.sound_grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    row-gap: 2rem;
-    column-gap: 0.5rem;
-}
-
-.video_grid {
+.grid_slide {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 2rem;
     column-gap: 1.5rem;
+}
+
+.grid_slide:has(.audio) {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid_slide .item.audio .info {
+    text-align: center;
+    padding-inline: 1rem;
 }

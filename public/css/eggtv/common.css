@@ -635,12 +635,13 @@ header .utill a.search {
 }
 
 .bar_header.step_header {
+    position: relative;
     padding: 3rem 0;
     height: 18rem;
     border: none;
 }
 
-.bar_header.step_header:has(.play_btn_block) .title_block:before, 
+/* .bar_header.step_header:has(.play_btn_block) .title_block:before, 
 .bar_header.step_header.eng_play:before, 
 .bar_header.step_header.step_play:before {
     content: "";
@@ -653,7 +654,7 @@ header .utill a.search {
     background-size: 25%;
     background-position: right bottom;
     background-repeat: no-repeat;
-}
+} */
 
 .bar_header.step_header .wrap {
     align-items: flex-start;
@@ -677,6 +678,13 @@ header .utill a.search {
 
 .bar_header.step_header:has(.play_btn_block) .wrap.block .title_block {
     padding-bottom: 5em;
+}
+
+.bar_header.step_header .step_char {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 100%
 }
 
 .bar_header.step_header .wrap.block .play_btn_block {
@@ -765,7 +773,7 @@ header .utill a.search {
     max-height: 4.3rem !important;
 }
 /*step헤더 구분*/
-.bar_header.step_header.step1 {
+/* .bar_header.step_header.step1 {
     background-color: #f5cd47;
 }
 
@@ -775,9 +783,9 @@ header .utill a.search {
 
 .bar_header.step_header.step1:after {
     background-color: #f5cd47;
-}
+} */
 /*step헤더 구분*/
-.bar_header.step_header.yellow {
+/* .bar_header.step_header.yellow {
     background-color: #f5cd47;
 }
 
@@ -877,7 +885,7 @@ header .utill a.search {
 
 .bar_header.step_header.dp2 .title_block:before {
     background-image: url(../../img/common/img_title_step5.png);
-}
+} */
 
 .bar_header.step_header.step1_plus p strong,
 .bar_header.step_header.step2_plus p strong,
@@ -889,7 +897,7 @@ header .utill a.search {
     margin-top: 0;
 }
 
-.bar_header.step_header.step1p {
+/* .bar_header.step_header.step1p {
     background-color: #5b6ebd;
 }
 
@@ -1007,7 +1015,7 @@ header .utill a.search {
 
 .bar_header.step_header.wtwy:after {
     background-color: #252f6c;
-}
+} */
 
 .bar_header.step_header.daily_egg {
     background-color: #4ec7be;
