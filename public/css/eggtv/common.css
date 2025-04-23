@@ -662,10 +662,6 @@ header .utill a.search {
     z-index: 2;
 }
 
-.bar_header.step_header:has(.play_btn_box){
-    height: auto;
-}
-
 .bar_header.step_header .wrap.block {
     display: block;
 }
@@ -676,67 +672,11 @@ header .utill a.search {
     justify-content: flex-start;
 }
 
-.bar_header.step_header:has(.play_btn_block) .wrap.block .title_block {
-    padding-bottom: 5em;
-}
-
 .bar_header.step_header .step_char {
     position: absolute;
     right: 0;
     bottom: 0;
-    max-height: 100%
-}
-
-.bar_header.step_header .wrap.block .play_btn_block {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-}
-
-.play_btn_box {
-    --color-primary: #f65c4a;
-    --color-secondary: #fddeda;
-    width: 50%;
-    background-color: #fff;
-    text-align: center;
-    padding:  2em 2.5em 3em;
-    border-radius: 2.8em;
-}
-
-.play_btn_box.blue {
-    --color-primary: #3493e7;
-    --color-secondary: #d2e7fa;
-}
-
-.play_btn_box .title {
-    font-size: 3rem;
-    color: var(--color-primary);
-    font-weight: 800;
-    margin-bottom: 0.5em;
-}
-
-.play_btn_list {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-.play_btn {
-    flex: 1;
-    display: inline-block;
-    background-color: var(--color-secondary);
-    font-size: 1.8rem;
-    color: #353535;
-    font-weight: 600;
-    padding: 0.8em 0;
-    border-radius: 0.5em;
-    box-shadow: 0 0.2em 0.3em rgba(0,0,0,0.05);
-}
-
-.play_btn.all {
-    background-color: var(--color-primary);
-    color: #fff;
-    box-shadow: none;
+    max-height: 90%;
 }
 
 .bar_header.step_header p {
@@ -1392,7 +1332,7 @@ header .utill a.search {
     border-radius: 3.5rem 5rem 4rem 4.5rem;
 }
 
-.play_btn_area {
+/* .play_btn_area {
     position: fixed;
     right: 3rem;
     z-index: 5;
@@ -1419,7 +1359,27 @@ header .utill a.search {
 .play_btn_area a.play_btn02 {
     background-image: url(../../img/common/loop_icon02.png);
     margin-top: 1.5rem;
+} */
+
+/* 선택 재생 */
+.btn_playback_block {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 0 2.5rem;
 }
+
+.btn_playback {
+    display: inline-block;
+    background-color: #f65c4a;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+    padding: 0.55em 1em 0.5em;
+    border-radius: 3em;
+}
+.btn_playback.blue { background-color: #558bee; }
 
 .video_thumnail {
     display: flex;
@@ -1701,10 +1661,10 @@ header .utill a.search {
         margin-top: 3rem;
     }
 
-    .play_btn_area a {
+    /* .play_btn_area a {
         width: 13rem;
         height: 13rem;
-    }
+    } */
 
     .home_btn {
         width: 5.5rem;

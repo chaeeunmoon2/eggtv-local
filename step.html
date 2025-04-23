@@ -30,7 +30,6 @@
 <!--<input type="hidden" name="token" id="token" value="{{ $token }}" />-->
 <!--<input type="hidden" name="step" id="step" value="{{ $step }}" />-->
 <section class="step_page">
-
   <!--step01~05-->
   <div class="move_header">
     <div class="bar_header step_header yellow normal" style="background-color: #fdd000;">
@@ -44,26 +43,6 @@
             <em>Everyday Life! 생활 속 아이의 일상 이야기</em>
           </p>
         </div>
-        <!--S:모음 버튼-->
-        <!-- <article class="play_btn_block">
-          <div class="play_btn_box">
-            <h4 class="title">VIDEO</h4>
-            <ul class="play_btn_list">
-              <li class="play_btn all">전체보기</li>
-              <li class="play_btn btn_audio_pop">Song모음</li>
-              <li class="play_btn btn_video_pop">Drama모음</li>
-            </ul>
-          </div>
-          <div class="play_btn_box blue">
-            <h4 class="title">AUDIO</h4>
-            <ul class="play_btn_list">
-              <li class="play_btn all">전체보기</li>
-              <li class="play_btn btn_audio_pop">Song모음</li>
-              <li class="play_btn btn_video_pop">Drama모음</li>
-            </ul>
-          </div>
-        </article> -->
-        <!--E:모음 버튼-->
       </div>
       <img class="step_char" src="./public/img/common/img_title_yellow.png" alt="">
     </div>
@@ -77,19 +56,13 @@
         </p>
       </div>
     </div>
-
   </div>
   <!--step01-->
-
-  <header class="list_header yellow">
-    <div class="lg_header">
-      <div></div>
-    </div>
-    <div class="mini_header"></div>    
-  </header>
-
-
   <div class="wrap">
+    <div class="btn_playback_block">
+      <button class="btn_playback" onclick="$('#playbackPopupVideo').show()">VIDEO 선택재생</button>
+      <button class="btn_playback blue" onclick="$('#playbackPopupAudio').show()">AUDIO 선택재생</button>
+    </div>
     <div class="search_thumnail">
       <ul class="list-book">
         <li class="item-book">
@@ -155,10 +128,102 @@
       </ul>
     </div>
 
-<!--    <div class="play_btn_area">-->
-<!--      <a href="#" onclick="return false;" class="play_btn01" id="video_pop">연속재생</a>-->
-<!--      <a href="#" onclick="return false;" class="play_btn02" id="audio_pop">연속재생</a>-->
-<!--    </div>-->
+    <!--S:VIDEO 선택재생 팝업-->
+    <div class="popup normal_pop playback_pop" id="playbackPopupVideo" style="display: none">
+      <div class="pop_wrap">
+          <button class="pop_close bg_gray" onclick="$('.playback_pop').hide()"></button>
+          <img class="img_char" src="./public/img/common/char_playback_video.png" draggable="false" alt="">
+          <div class="inner">
+            <div class="checkbox_category_list">
+              <!--
+                  input id 값이랑 
+                  label for 값 동일하게 유지
+                -->
+                <label for="category_video_01" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_01" />
+                  <span class="category_txt">All</span>
+                </label>
+                <label for="category_video_02" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_02" />
+                  <span class="category_txt">Sitcom</span>
+                </label>
+                <label for="category_video_03" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_03" />
+                  <span class="category_txt">Animation</span>
+                </label>
+                <label for="category_video_04" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_04" />
+                  <span class="category_txt">Song&Dance</span>
+                </label>
+                <label for="category_video_05" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_05" />
+                  <span class="category_txt">Sing Along</span>
+                </label>
+                <label for="category_video_06" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_06" />
+                  <span class="category_txt">Jimmy&Tracy</span>
+                </label>
+                <label for="category_video_07" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_07" />
+                  <span class="category_txt">Ellie’s Storytelling</span>
+                </label>
+                <label for="category_video_08" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_08" />
+                  <span class="category_txt">Home Activity</span>
+                </label>
+            </div>
+            <button class="btn_play_category">재생하기</button>
+          </div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+    <!--E:VIDEO 선택재생 팝업-->
+    <!--S:AUDIO 선택재생 팝업-->
+    <div class="popup normal_pop playback_pop" id="playbackPopupAudio" style="display: none">
+      <div class="pop_wrap">
+          <button class="pop_close bg_gray" onclick="$('.playback_pop').hide()"></button>
+          <img class="img_char" src="./public/img/common/char_playback_audio.png" draggable="false" alt="">
+          <div class="inner">
+            <div class="checkbox_category_list blue">
+              <!--
+                  input id 값이랑 
+                  label for 값 동일하게 유지
+                -->
+              <label for="category_audio_01" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_01" />
+                <span class="category_txt">All</span>
+              </label>
+              <label for="category_audio_02" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_02" />
+                <span class="category_txt">Traditional Song</span>
+              </label>
+              <label for="category_audio_03" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_03" />
+                <span class="category_txt">Musical</span>
+              </label>
+              <label for="category_audio_04" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_04" />
+                <span class="category_txt">Rhyme Chant</span>
+              </label>
+              <label for="category_audio_05" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_05" />
+                <span class="category_txt">Story Acting</span>
+              </label>
+              <label for="category_audio_06" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_06" />
+                <span class="category_txt">EGG Song</span>
+              </label>
+              <label for="category_audio_07" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_07" />
+                <span class="category_txt">Traditional Song Inst.</span>
+              </label>
+            </div>
+            <button class="btn_play_category blue">재생하기</button>
+          </div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+    <!--E:AUDIO 선택재생 팝업-->
   </div>
 </section>
 </body>
