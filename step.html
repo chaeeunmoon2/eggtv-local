@@ -134,13 +134,13 @@
           <button class="pop_close bg_gray" onclick="$('.playback_pop').hide()"></button>
           <img class="img_char" src="./public/img/common/char_playback_video.png" draggable="false" alt="">
           <div class="inner">
-            <div class="checkbox_category_list">
+            <div class="checkbox_category_list" id="videoCategoryList">
               <!--
                   input id 값이랑 
                   label for 값 동일하게 유지
                 -->
-                <label for="category_video_01" class="checkbox_category">
-                  <input type="checkbox" name="" value="" id="category_video_01" />
+                <label for="category_video_all" class="checkbox_category">
+                  <input type="checkbox" name="" value="" id="category_video_all" />
                   <span class="category_txt">All</span>
                 </label>
                 <label for="category_video_02" class="checkbox_category">
@@ -184,13 +184,13 @@
           <button class="pop_close bg_gray" onclick="$('.playback_pop').hide()"></button>
           <img class="img_char" src="./public/img/common/char_playback_audio.png" draggable="false" alt="">
           <div class="inner">
-            <div class="checkbox_category_list blue">
+            <div class="checkbox_category_list blue" id="audioCategoryList">
               <!--
                   input id 값이랑 
                   label for 값 동일하게 유지
                 -->
-              <label for="category_audio_01" class="checkbox_category">
-                <input type="checkbox" name="" value="" id="category_audio_01" />
+              <label for="category_audio_all" class="checkbox_category">
+                <input type="checkbox" name="" value="" id="category_audio_all" />
                 <span class="category_txt">All</span>
               </label>
               <label for="category_audio_02" class="checkbox_category">
@@ -226,5 +226,36 @@
     <!--E:AUDIO 선택재생 팝업-->
   </div>
 </section>
+<script>
+  $(document).ready(function () {
+    function setupCheckboxLogic(containerId, allCheckboxId) {
+      const $container = $(containerId);
+      const $allCheckboxSelector = allCheckboxId;
+
+      // 'All' 체크박스 이벤트 (위임)
+      $container.on("change", $allCheckboxSelector, function () {
+        const isChecked = $(this).is(":checked");
+        $container.find("input[type='checkbox']").not(this).prop("checked", isChecked);
+      });
+
+      // 개별 체크박스 이벤트 (위임)
+      $container.on("change", "input[type='checkbox']:not(" + $allCheckboxSelector + ")", function () {
+        const $all = $container.find($allCheckboxSelector);
+        const $others = $container.find("input[type='checkbox']").not($all);
+        const total = $others.length;
+        const checked = $others.filter(":checked").length;
+
+        $all.prop("checked", total === checked);
+      });
+    }
+
+    // 오디오 체크박스 로직
+    setupCheckboxLogic("#audioCategoryList", "#category_audio_all");
+
+    // 비디오 체크박스 로직
+    setupCheckboxLogic("#videoCategoryList", "#category_video_all");
+  });
+</script>
+
 </body>
 </html>

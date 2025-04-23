@@ -1422,6 +1422,7 @@ header .utill a.search {
 
 /*0606 새로추가*/
 .fixed_header { top: 0; }
+.fixed_header .bar_header.step_header { position: fixed; }
 
 .move_header {
     position: fixed;

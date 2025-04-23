@@ -319,6 +319,7 @@
   min-height: 3em;
   width: 100%;
   background-color: var(--bg);
+  font-family: var(--font-family-myriad-black);
   font-size: 1.8rem;
   color: var(--color-font);
   font-weight: 800;
