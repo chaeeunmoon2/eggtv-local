@@ -759,12 +759,13 @@
 <script>
   let startSlidSwiper = function() {
     let screenRate = window.innerWidth / window.innerHeight;
-    let perView = 1;
-    if (screenRate > 1) {
-      perView = 6.5;
-    } else {
-      perView = 4.5;
-    }
+    let perView = screenRate > (16 / 9) ? 6.5 : 4.5;
+    
+    // if (screenRate > 1) {
+    //   perView = 6.5;
+    // } else {
+    //   perView = 4.5;
+    // }
     var cardSwiper = new Swiper(".card_slide", {
       slidesPerView: perView,
       spaceBetween: 0.5,

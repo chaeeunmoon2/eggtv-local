@@ -69,7 +69,7 @@ main {
 @media (orientation: portrait) {
     /* 세로모드 Portrait 모드일 때 적용할 CSS */
     .card_slide .list-banner li {
-        max-width: calc(100% / 3.5);
+        /* max-width: calc(100% / 3.5); */
         margin-right: 10px;
     }
 
@@ -82,7 +82,7 @@ main {
 @media (orientation: landscape) {
     /* 가로모드 Landscape 모드일 때 적용할 CSS */
     .card_slide .list-banner li {
-        max-width: calc(100% / 5.2);
+        /* max-width: calc(100% / 5.2); */
         margin-right: 10px;
     }
 }

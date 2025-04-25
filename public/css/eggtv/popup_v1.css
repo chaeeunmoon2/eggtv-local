@@ -284,7 +284,10 @@
 }
 
 /* S:선택재생 팝업 */
-.playback_pop.normal_pop .pop_wrap { width: 70%; }
+.playback_pop.normal_pop .pop_wrap { 
+  width: auto; 
+  /* max-width: 75vw; */
+}
 
 .playback_pop .pop_wrap:has(.img_char) { text-align: center; }
 .playback_pop .pop_close {
@@ -302,9 +305,24 @@
 
 .checkbox_category_list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 2.5rem;
+}
+
+.checkbox_category_list:has(:nth-child(4)) {
+  width: calc(45vw - 8rem);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.checkbox_category_list:has(:nth-child(5)) {
+  width: calc(60vw - 8rem);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.checkbox_category_list:has(:nth-child(7)) {
+  width: calc(75vw - 8rem);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .checkbox_category {
