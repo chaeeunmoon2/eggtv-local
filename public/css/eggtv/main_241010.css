@@ -1,4 +1,8 @@
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: calc(100vh - 10rem);
   padding-bottom: 4rem;
   overflow-x: hidden;
 }
@@ -18,13 +22,13 @@ main {
   display: inline-block;
 }
 
-.main_statistics,
+/* .main_statistics,
 .watching_video,
 .suggestion_video,
 .favorite_video,
 .favorite_sound {
   margin-top:2.5rem;
-}
+} */
 .step_card {
   margin-top: 1.5rem;
 }
@@ -89,9 +93,18 @@ main {
 /*0509 비디오 프로그래스바 새로추가*/
 
 /* S:2410 누적시간 노출 */
+.main_statistics {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .main_statistics .wrap.d_flex {
-    display: flex;
-    gap: 3vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 3vw;
+  align-items: stretch;
 }
 
 .main_statistics .title_block {
@@ -123,6 +136,7 @@ main {
     display: flex;
     gap: 2em;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: #fff;
     padding: 0 3em;

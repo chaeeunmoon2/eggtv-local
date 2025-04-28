@@ -392,10 +392,27 @@
   background-color: #fff;
   z-index: 9;
   overflow: auto;
+  pointer-events: none;
+  will-change: opacity, transform;
 }
 
 .layer_fullscreen.show {
   display: block;
+  animation: slide-up 0.4s ease-out;
+  pointer-events: auto;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0.2;
+    transform: translate(0, 15px);
+    
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 @media (max-width: 1800px) {
