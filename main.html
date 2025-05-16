@@ -20,6 +20,11 @@
   <script src="./public/js/lib/swiper-9/swiper-bundle.min.js"></script>
   <!-- <script src="./public/js/eggtv/main_20240712.js"></script> -->
   <script src="./public/js/eggtv/common_240928.js"></script>
+
+  <!-- Production -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js"></script>
 </head>
 <body>
 <!--<input type="hidden" name="_token" value="{{ csrf_token() }}" />-->
@@ -74,6 +79,209 @@
   </div>
   <div class="shadow"></div>
 </div>
+
+<!--S:별점팝업-->
+<div class="popup normal_pop" id="userRatingPopup" style="display: none;">
+  <div class="pop_wrap">
+    <img class="char_rating" src="/public/img/common/char_user_rating.png" alt="">
+    <div class="inner desc_block">
+      <p class="title">
+        EGG TV가 마음에 드세요?
+      </p>
+      <div class="btn_block">
+        <button class="btn_pop" onclick="openRatingN()">그냥 그래요.</button>
+        <button class="btn_pop red" onclick="openRatingY()">네, 좋아요!</button>
+      </div>
+      <p class="desc">
+        만족하실 수 있는 앱이 되도록 <br /> 
+        끊임없이 노력하겠습니다.
+      </p>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--E:별점팝업-->
+
+<!--S:별점팝업 - 좋아요-->
+<div class="popup normal_pop" id="userRatingPopupY" style="display: none;">
+  <div class="pop_wrap">
+    <div class="inner desc_block">
+      <p class="title">
+        감사합니다! 🥰
+      </p>
+      <p class="sub_title">
+        그렇다면 스토어에<br />
+        칭찬을 남겨주시겠어요?
+      </p>
+      <div class="btn_block">
+        <button class="btn_pop" onclick="$('.popup').hide()">다음에요.</button>
+        <button class="btn_pop red">네, 좋아요!</button>
+      </div>
+      <p class="desc">
+        더 많은 분들이 볼 수 있도록 리뷰를 적어주세요.<br />
+        칭찬은 저힁에게 큰 힘이 됩니다.
+      </p>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--E:별점팝업-->
+
+<!--S:별점팝업 - 그냥 그래요-->
+<div class="popup normal_pop" id="userRatingPopupN" style="display: none;">
+  <div class="pop_wrap">
+    <div class="inner desc_block">
+      <p class="title">
+        불편한 점이나 건의사항을<br />
+        저희에게 알려주세요.
+      </p>
+      <div>
+        <textarea name="" id="feedbackTextarea" rows="" cols="4" class="form_textarea" maxlength="300" placeholder="불편한 점이나 건의사항을 저희에게 알려주세요."></textarea>
+        <p class="textarea_words"><span id="charCount">0</span>/300자</p>
+      </div>
+      <div class="btn_block">
+        <button class="btn_pop" onclick="$('.popup').hide()">다음에요.</button>
+        <button class="btn_pop red">보내기</button>
+      </div>
+      <p class="desc">
+        만족하실 수 있는 앱이 되도록 <br /> 
+        끊임없이 노력하겠습니다.
+      </p>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<!--E:별점팝업-->
+<script>
+  $(document).ready(function(){
+      // 별점 팝업 - feedbackTextarea 입력 글자수 표시 js
+      const $textarea = $('#feedbackTextarea');
+      const $counter = $('#charCount');
+    
+      $textarea.on('input', function () {
+        const currentLength = $(this).val().length;
+        $counter.text(currentLength);
+      });
+  });
+
+  function openRatingY(){
+    $('#userRatingPopup').hide();
+    $('#userRatingPopupY').show();
+  }
+  
+  function openRatingN(){
+    $('#').hide();
+    $('#userRatingPopupN').show();
+  }
+</script>
+
+<style>
+  
+  .ani_clap { 
+    width: 30vw;
+    margin: 0 auto 1rem;
+  }
+
+  .ani_confetti {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 100; 
+    width: 100vw; 
+    height: 100vh;
+  }
+
+  .zoomin_pop.show {
+    display: block;
+    visibility: visible;
+      opacity: 1;
+  }
+
+  .zoomin_pop .pop_wrap {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+    }
+
+    .zoomin_pop.show .pop_wrap {
+      animation: zoomIn 0.3s ease forwards;
+      animation-delay: .2s;
+    }
+
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+     .popup .title_msg {
+      font-size: 4.5rem;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+      text-shadow: 0.025em 0.05em 0.02em rgba(0, 0, 0, 0.4);
+    }
+
+    .popup .title_msg .font_yellow { color: #fff464; }
+
+</style>
+<script>
+    let animationConfetti, animationClap;
+
+    // 달성팝업 show
+    function showAchievementPopup(){
+        if (!animationConfetti) {
+            animationConfetti = lottie.loadAnimation({
+                container: document.getElementById('animationConfetti'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: './public/lottie/animation_confetti.json'
+            });
+        }
+
+        if (!animationClap) {
+            animationClap = lottie.loadAnimation({
+                container: document.getElementById('animationClap'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: false,
+                path: './public/lottie/animation_clap.json'
+            });
+        }
+
+        setTimeout(() => {
+          $('#achievementPopup').addClass('show');
+
+          animationConfetti.play();
+          animationClap.play();
+        }, 300);
+      }
+
+      // 달성팝업 hide
+      function hideAchievementPopup(){
+        $('#achievementPopup').removeClass('show');
+        // 애니메이션 제거
+        if (animationConfetti) {
+          animationConfetti.destroy();
+        }
+
+        if (animationClap) {
+          animationClap.destroy();
+        }  
+      }
+
+      $(document).ready(function(){
+        showAchievementPopup();
+      });
+</script>
+
+
 <!--S:데일리에그-->
 <div class="layer_fullscreen show" id="layer_dailyegg">
   <div class="daily_egg_page">
@@ -99,7 +307,83 @@
           <div class="desc_block">
             <!--S:오늘의 주제-->
             <div class="topic_box">
-              <h2 class="title">2월 15일 오늘의 주제</h2>
+              <div class="title_block">
+                <h2 class="title">2월 15일 오늘의 주제</h2>
+                <div class="progress_block">
+                  <p class="progress_status">
+                    <span class="current_count">0</span>/<span class="total_count">5</span>
+                  </p>    
+                  <div class="progress_box">
+                    <div class="progress_bar" data-width="40%">
+                      <span class="ico_handle" id="progressHandle"></span>
+                    </div>
+                  </div>  
+                </div>
+              </div>  
+              <script>
+
+handleProgressWithTooltip();
+                // 모달이 열리면 실행될 함수
+function handleProgressWithTooltip() {
+  const bar = document.querySelector('.progress_bar');
+  const handle = document.querySelector('#progresshandle');
+  const targetWidth = bar.getAttribute('data-width');
+  const animationDuration = 800; // progress bar 애니메이션 시간 (ms)
+
+  // 약간 딜레이 후에 width와 walk 애니메이션 시작
+  setTimeout(() => {
+    bar.style.width = targetWidth;  // progress bar width 변화
+    handle.classList.add('walk');   // walk 애니메이션 추가
+
+    // 애니메이션이 끝난 후 .walk 클래스 제거
+    setTimeout(() => {
+      handle.classList.remove('walk');
+    }, 1200); // walk 애니메이션 길이 (1.2초)
+
+    // progress bar width가 변경된 후 1초 뒤에 툴팁을 표시 (애니메이션 시간에 맞춰)
+    setTimeout(() => {
+      const currentCount = Number(document.querySelector('.current_count')?.textContent || 0);
+      const totalCount = Number(document.querySelector('.total_count')?.textContent || 0);
+
+      let tooltipContent = '';
+      let tooltipTheme = '';
+      let tooltipPosition = '';
+
+      if (currentCount === 0) {
+        tooltipContent = '오늘의 EGG를 시작해주세요!';
+        tooltipTheme = 'before';
+        tooltipPosition = 'top-start';
+      } else if (currentCount > 0 && currentCount < totalCount) {
+        tooltipContent = '아이의 일상이 영어가 되는 중…';
+        tooltipTheme = 'doing';
+        tooltipPosition = 'top';
+      } else if (currentCount >= totalCount) {
+        tooltipContent = 'Daily EGG 성공!';
+        tooltipTheme = 'finished';
+        tooltipPosition = 'top-end';
+      }
+
+      // 툴팁 표시
+      tippy('#progressHandle', {
+        content: tooltipContent,
+        theme: tooltipTheme,
+        placement: tooltipPosition,
+        trigger: 'mouseenter focus click', // 툴팁 트리거
+        showOnCreate: true,
+        onShow(instance) {
+          if (!instance._hasAutoHidden) {
+            setTimeout(() => {
+              instance.hide();
+            }, 3000); // 3초 후 자동 숨기기
+            instance._hasAutoHidden = true; // 한 번만 숨기기
+          }
+        }
+      });
+    }, animationDuration + 200); // 0.8초 + 약간의 여유를 둔 후 툴팁 표시
+  }, 800); // 0.8초 후 시작
+}
+
+              </script>
               <p class="desc">
                 남의 것을 부러워하기보다 자신이 가진 것을 소중히 여겨야해요.
                 더 나아가 양보하고 도와준다면 더 좋겠죠?
@@ -171,6 +455,9 @@
                             추가 오픈!
                           </p>
                         </div>
+                        <!--.on 클래스 추가시 아이콘 활성화-->
+                        <i class="ico_watched"></i>
+                        <!-- <i class="ico_watched on"></i> -->
                         <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
                           alt="" id="vod-yellow_01_dra" loading="lazy" />
                         <div class="video_progress">
@@ -194,6 +481,7 @@
                             추가 오픈!
                           </p>
                         </div>
+                        <!-- <i class="ico_watched on"></i> -->
                         <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
                           alt="" id="vod-yellow_01_dra" loading="lazy" />
                         <div class="video_progress">
@@ -252,6 +540,7 @@
                             추가 오픈!
                           </p>
                         </div>
+                        <i class="ico_watched on"></i>
                         <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/vod/YELLOW/yellow_01_dra.png"
                           alt="" id="vod-yellow_01_dra" loading="lazy" />
                         <div class="video_progress">
@@ -580,6 +869,19 @@
   });
 </script>
 <!--E:데일리에그-->
+<!--S:데일리에그 달성 팝업-->
+<div class="popup normal_pop zoomin_pop" id="achievementPopup" onclick="hideAchievementPopup()">
+  <div class="pop_wrap">
+    <div id="animationClap" class="ani_clap"></div>  
+    <h4 class="title_msg font_cookierun">
+      짝짝짝<br />
+      <span class="font_yellow">오늘의 데일리에그 완성</span>
+    </h4>
+  </div>
+  <div id="animationConfetti" class="ani_confetti"></div>  
+  <div class="shadow" style="z-index: 9;"></div>
+</div>
+<!--E:데일리에그 달성 팝업-->
 <header>
   <div class="wrap">
     <a href="#" onclick="return false;" class="btn-mypage mypage">마이페이지</a>

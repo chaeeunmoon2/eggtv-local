@@ -8,7 +8,7 @@
 }
 
  */
- @font-face {
+@font-face {
     font-family: "Cafe24Ssurround";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
     format("woff");
@@ -23,38 +23,15 @@
     font-style: normal;
 }
 
-@import url("https://fonts.cdnfonts.com/css/myriad-pro");
+/* adobe fonts - Myriad */
+@import url("https://use.typekit.net/hau7fbw.css");
 
 @font-face {
     font-family: "Myriad Pro Black";
     font-style: normal;
     font-weight: 900;
-    src: url(../../fonts/MyriadPro-Black.woff) format('woff'),
-    url(../../fonts/MyriadPro-Black.woff2) format('woff2');
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 400;
-    src: url(../../fonts/NotoSansKR-Regular.woff) format('woff'),
-    url(../../fonts/NotoSansKR-Regular.woff2) format('woff2');
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 700;
-    src: url(../../fonts/NotoSansKR-Bold.woff) format('woff'),
-    url(../../fonts/NotoSansKR-Bold.woff) format('woff2');
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 900;
-    src: url(../../fonts/NotoSansKR-Black.woff) format('woff'),
-    url(../../fonts/NotoSansKR-Black.woff) format('woff2');
+    src: url(/fonts/MyriadPro-Black.woff) format('woff'),
+    url(/fonts/MyriadPro-Black.woff2) format('woff2');
 }
 
 /* 쿠키런 */
@@ -62,25 +39,25 @@
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 900;
-    src: url(../../fonts/CookieRun/CookieRun-Black.woff) format('woff');
+    src: url(/fonts/CookieRun-Black.woff) format('woff');
 }
 
 @font-face {
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 600;
-    src: url(../../fonts/CookieRun/CookieRun-Bold.woff) format('woff');
+    src: url(/fonts/CookieRun-Bold.woff) format('woff');
 }
 
 @font-face {
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 400;
-    src: url(../../fonts/CookieRun/CookieRun-Regular.woff) format('woff');
+    src: url(/fonts/CookieRun-Regular.woff) format('woff');
 }
 
-/* 일본 폰트 - Noto Sans JP, M PLUS 1p */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap');
+/* 한글폰트 - Noto Sans KR / 일본 폰트 - Noto Sans JP, M PLUS 1p */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
 
 :root {
     --pink-shadow: 4px 8px 20px rgba(255, 125, 140, 0.4);
@@ -95,13 +72,13 @@
     --glassnav: rgba(255, 255, 255, 0.9);
     --green: #36b2a4;
     --test: 0;
-    --font-family-primary: "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
-    --font-family-cafe24: "Cafe24Ssurround", "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
-    --font-family-cafe24-secondary: "Noto Sans KR", "Noto Sans JP", "Cafe24Ssurround", "Myriad Pro", "M PLUS 1p", sans-serif;
-    --font-family-noto: "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
-    --font-family-myriad-black: "Myriad Pro Black", "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
-    --font-family-ONE-Mobile-pop: "ONE-Mobile-POP", "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
-    --font-family-cookieRun: 'CookieRun', "Myriad Pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
+    --font-family-primary: "myriad-pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
+    --font-family-cafe24: "Cafe24Ssurround", "myriad-pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
+    --font-family-cafe24-secondary: "Noto Sans KR", "Noto Sans JP", "Cafe24Ssurround", "myriad-pro", "M PLUS 1p", sans-serif;
+    --font-family-noto: "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", "myriad-pro", sans-serif;
+    --font-family-myriad-black: "Myriad Pro Black", "myriad-pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
+    --font-family-ONE-Mobile-pop: "ONE-Mobile-POP", "myriad-pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
+    --font-family-cookieRun: 'CookieRun', "myriad-pro", "Noto Sans KR", "M PLUS 1p", "Noto Sans JP", sans-serif;
 }
 
 .font_cookierun {
@@ -110,6 +87,22 @@
 
 body {
     font-family: var(--font-family-primary);
+    /* 앱 내 웹뷰의 폰트 사이즈 시스템 설정으로 변경 막기 */
+    -webkit-text-size-adjust:none;
+
+    /* 롱 프레스 방지 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-touch-callout: none;
+}
+
+img, a {
+    /* 이미지 드래그 방지 */
+    user-drag: none;
+    -webkit-user-drag: none;
 }
 
 /* S:웹뷰 밖 background 설정 */
@@ -345,7 +338,7 @@ table caption {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: url("../../img/common/check_default.png") center no-repeat;
+    background: url("/img/common/check_default.png") center no-repeat;
     background-size: 100%;
     position: absolute;
     left: 0;
@@ -355,7 +348,7 @@ table caption {
 }
 
 .checkbox input[type="checkbox"]:checked + label:before {
-    background: url("../../img/common/check_on.png") center no-repeat;
+    background: url("/img/common/check_on.png") center no-repeat;
     background-size: 100%;
 }
 /* input radio */
@@ -381,7 +374,7 @@ table caption {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background: url("../../img/common/radio_default.png") center no-repeat;
+    background: url("/img/common/radio_default.png") center no-repeat;
     background-size: 100%;
     position: absolute;
     left: 0;
@@ -391,7 +384,7 @@ table caption {
 }
 
 .radiobox input[type="checkbox"]:checked + label:before {
-    background: url("../../img/common/radio_on.png") center no-repeat;
+    background: url("/img/common/radio_on.png") center no-repeat;
     background-size: 100%;
 }
 
@@ -517,7 +510,7 @@ header .wrap {
 header .mypage {
     font-size: 0;
     line-height: 0;
-    background: url(../../img/common//mypage_icon.png) center no-repeat;
+    background: url(/img/common//mypage_icon.png) center no-repeat;
     background-size: 100%;
     width: 5rem;
     height: 4rem;
@@ -560,6 +553,8 @@ header .utill a {
 
 header .utill a.bluetooth {
     /* background-image: url(/public/img/common/bluetooth_off.png); */
+    display: inline-flex;
+    align-items: center;
     width: auto;
     min-width: 6em;
     background-color: #fff;
@@ -567,7 +562,7 @@ header .utill a.bluetooth {
     color: #979796;
     font-weight: 700;
     text-align: center;
-    line-height: 4.8rem;
+    line-height: 1.3;
     padding-inline: 1em;
     border-radius: 3em;
 }
@@ -579,11 +574,11 @@ header .utill a.bluetooth.on {
 }
 
 header .utill a.membership {
-    background-image: url(../../img/common/membership.png);
+    background-image: url(/img/common/membership.png);
 }
 
 header .utill a.search {
-    background-image: url(../../img/common/search.png);
+    background-image: url(/img/common/search.png);
 }
 /*상세페이지 헤더*/
 
@@ -609,8 +604,25 @@ header .utill a.search {
     margin-left: 3rem;
 }
 
+.bar_header .current_title img {
+    max-height: 3rem;
+}
+
 .bar_header .current_title em {
     font-weight: 700;
+}
+
+.bar_header .title_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 5.5rem;
+}
+
+.bar_header .title_img > img {
+    max-height: 3.5rem;
 }
 
 .bar_header.yellow {
@@ -641,8 +653,8 @@ header .utill a.search {
     border: none;
 }
 
-/* .bar_header.step_header:has(.play_btn_block) .title_block:before, 
-.bar_header.step_header.eng_play:before, 
+/* .bar_header.step_header:has(.play_btn_block) .title_block:before,
+.bar_header.step_header.eng_play:before,
 .bar_header.step_header.step_play:before {
     content: "";
     width: 100%;
@@ -676,7 +688,7 @@ header .utill a.search {
     position: absolute;
     right: 0;
     bottom: 0;
-    max-height: 90%;
+    max-height: 90%
 }
 
 .bar_header.step_header p {
@@ -702,6 +714,10 @@ header .utill a.search {
 
 .bar_header.step_header p strong img {
     display: inline-block;
+    width: auto;
+    height: 0.75em;
+    max-height: 79px;
+    object-fit: contain;
 }
 
 .bar_header.step_header.yellow p strong img,
@@ -712,120 +728,6 @@ header .utill a.search {
 .bar_header.step_header.bluep p strong img {
     max-height: 4.3rem !important;
 }
-/*step헤더 구분*/
-/* .bar_header.step_header.step1 {
-    background-color: #f5cd47;
-}
-
-.bar_header.step_header.step1 .title_block:before {
-    background-image: url(../../img/common/img_title_step1.png);
-}
-
-.bar_header.step_header.step1:after {
-    background-color: #f5cd47;
-} */
-/*step헤더 구분*/
-/* .bar_header.step_header.yellow {
-    background-color: #f5cd47;
-}
-
-.bar_header.step_header.yellow .title_block:before {
-    background-image: url(../../img/common/img_title_yellow.png);
-}
-
-.bar_header.step_header.yellow:after {
-    background-color: #f5cd47;
-}
-
-.bar_header.step_header.step2 {
-    background-color: #bdd630;
-}
-
-.bar_header.step_header.step2 .title_block:before {
-    background-image: url(../../img/common/img_title_step2.png);
-}
-
-.bar_header.step_header.step2:after {
-    background-color: #bdd630;
-}
-
-.bar_header.step_header.green {
-    background-color: #bdd630;
-}
-
-.bar_header.step_header.green .title_block:before {
-    background-image: url(../../img/common/img_title_green.png);
-}
-
-.bar_header.step_header.green:after {
-    background-color: #bdd630;
-}
-
-.bar_header.step_header.step3 {
-    background-color: #75bee9;
-}
-
-.bar_header.step_header.step3 .title_block:before {
-    background-image: url(../../img/common/img_title_step3.png);
-}
-
-.bar_header.step_header.step3:after {
-    background-color: #75bee9;
-}
-
-.bar_header.step_header.blue {
-    background-color: #75bee9;
-}
-
-.bar_header.step_header.blue .title_block:before {
-    background-image: url(../../img/common/img_title_blue.png);
-}
-
-.bar_header.step_header.blue:after {
-    background-color: #75bee9;
-}
-
-.bar_header.step_header.step4 {
-    background-color: #f19935;
-}
-
-.bar_header.step_header.step4 .title_block:before {
-    background-image: url(../../img/common/img_title_step4.png);
-}
-
-.bar_header.step_header.step4:after {
-    background-color: #f19935;
-}
-
-.bar_header.step_header.step5 {
-    background-color: #47bd4f;
-}
-
-.bar_header.step_header.step5 .title_block:before {
-    background-image: url(../../img/common/img_title_step5.png);
-}
-
-.bar_header.step_header.step5:after {
-    background-color: #47bd4f;
-}
-
-.bar_header.step_header.dp1,
-.bar_header.step_header.dp1:after {
-    background-color: #7E6FBA;
-}
-
-.bar_header.step_header.dp1 .title_block:before {
-    background-image: url(../../img/common/img_title_step4.png);
-}
-
-.bar_header.step_header.dp2,
-.bar_header.step_header.dp2:after {
-    background-color: #E788B7;
-}
-
-.bar_header.step_header.dp2 .title_block:before {
-    background-image: url(../../img/common/img_title_step5.png);
-} */
 
 .bar_header.step_header.step1_plus p strong,
 .bar_header.step_header.step2_plus p strong,
@@ -836,126 +738,6 @@ header .utill a.search {
 .bar_header.step_header.other02 p strong {
     margin-top: 0;
 }
-
-/* .bar_header.step_header.step1p {
-    background-color: #5b6ebd;
-}
-
-.bar_header.step_header.step1p .title_block:before {
-    background-image: url(../../img/common/img_title_step1_plus.png);
-}
-
-.bar_header.step_header.step1p:after {
-    background-color: #5b6ebd;
-}
-
-.bar_header.step_header.step2p {
-    background-color: #f04e28;
-}
-
-.bar_header.step_header.step2p:after {
-    background-color: #f04e28;
-}
-
-.bar_header.step_header.step2p .title_block:before {
-    background-image: url(../../img/common/img_title_step2_plus.png);
-}
-
-.bar_header.step_header.step3p {
-    background-color: #c42c91;
-}
-
-.bar_header.step_header.step3p:after {
-    background-color: #c42c91;
-}
-
-.bar_header.step_header.step3p .title_block:before {
-    background-image: url(../../img/common/img_title_step3_plus.png);
-}
-
-.bar_header.step_header.yellowp {
-    background-color: #F39800;
-}
-
-.bar_header.step_header.yellowp .title_block:before {
-    background-image: url(../../img/common/img_title_yellow_plus.png);
-}
-
-.bar_header.step_header.yellowp:after {
-    background-color: #F39800;
-}
-
-.bar_header.step_header.greenp {
-    background-color: #79C48D;
-}
-
-.bar_header.step_header.greenp:after {
-    background-color: #79C48D;
-}
-
-.bar_header.step_header.greenp .title_block:before {
-    background-image: url(../../img/common/img_title_green_plus.png);
-}
-
-.bar_header.step_header.bluep {
-    background-color: #3573B9;
-}
-
-.bar_header.step_header.bluep:after {
-    background-color: #3573B9;
-}
-
-.bar_header.step_header.bluep .title_block:before {
-    background-image: url(../../img/common/img_title_blue_plus.png);
-}
-
-.bar_header.step_header.ms {
-    background-color: #4abfed;
-}
-
-.bar_header.step_header.ms .title_block:before {
-    background-image: url(../../img/common/img_title_mr_story.png);
-}
-
-.bar_header.step_header.ms:after {
-    background-color: #4abfed;
-}
-
-.bar_header.step_header.md {
-    background-color: #ed1b24;
-}
-
-.bar_header.step_header.md .title_block:before {
-    background-image: url(../../img/common/img_title_mr_drama.png);
-}
-
-.bar_header.step_header.md:after {
-    background-color: #ed1b24;
-}
-
-.bar_header.step_header.ftts {
-    background-color: #d12727;
-}
-
-.bar_header.step_header.ftts .title_block:before {
-    background-image: url(../../img/common/img_title_ftts.png);
-}
-
-.bar_header.step_header.ftts:after {
-    background-color: #d12727;
-}
-
-.bar_header.step_header.wtwy {
-    background-color: #252f6c;
-}
-
-.bar_header.step_header.wtwy .title_block:before {
-    background-image: url(../../img/common/img_title_wtwy.png);
-}
-
-.bar_header.step_header.wtwy:after {
-    background-color: #252f6c;
-} */
 
 .bar_header.step_header.daily_egg {
     background-color: #4ec7be;
@@ -981,7 +763,7 @@ header .utill a.search {
 
 .bar_header.step_header.eng_play:before {
     background-color: #ffd502;
-    background-image: url(../../img/common/eng_play_bg.png);
+    background-image: url(/img/common/eng_play_bg.png);
     background-size: 25rem;
     background-position: right 4rem bottom 0;
     height: 100%;
@@ -998,7 +780,7 @@ header .utill a.search {
 
 .bar_header.step_header.step_play:before {
     background-color: #F34849;
-    background-image: url(../../img/common/step14_bg.png);
+    background-image: url(/img/common/step14_bg.png);
     background-size: 17rem;
     background-position: right 4rem bottom 0;
     height: 100%;
@@ -1076,7 +858,7 @@ header .utill a.search {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url(../../img/common/home_icon.png);
+    background-image: url(/img/common/home_icon.png);
     margin-left: auto;
 }
 
@@ -1093,18 +875,22 @@ header .utill a.search {
 }
 
 .prev_arrow.brown {
-    background-image: url(../../img/common/arrow_brown.png);
+    background-image: url(/img/common/arrow_brown.png);
     background-size: 100%;
 }
 
 .prev_arrow.light_brown {
-    background-image: url(../../img/common/arrow_light_brown.png);
+    background-image: url(/img/common/arrow_light_brown.png);
     background-size: 100%;
 }
 
 .sub_content {
     padding: 3.5rem 0;
-    padding-top: 10rem;
+    padding-top: 14rem;
+}
+
+body:has(.step_header) .sub_content {
+    padding-top: 23rem;
 }
 
 .select_top {
@@ -1130,7 +916,7 @@ header .utill a.search {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: #fff url(../../img/common/select_arrow.png) right 1.5rem center
+    background: #fff url(/img/common/select_arrow.png) right 1.5rem center
     no-repeat;
     background-size: 1.5rem;
     min-width: 20rem;
@@ -1150,7 +936,7 @@ header .utill a.search {
 .search_section {
     min-height: 100vh;
     height: auto;
-    background: #fffbf2 url(../../img/common/search_bg.jpg) right 5rem bottom
+    background: #fffbf2 url(/img/common/search_bg.jpg) right 5rem bottom
     no-repeat;
     background-size: 55rem;
 }
@@ -1211,7 +997,7 @@ header .utill a.search {
     line-height: 0;
     width: 4rem;
     height: 5rem;
-    background: url(../../img/common/search_icon.png) center no-repeat;
+    background: url(/img/common/search_icon.png) center no-repeat;
     background-size: 100%;
     position: absolute;
     right: 1rem;
@@ -1256,7 +1042,7 @@ header .utill a.search {
     line-height: 0;
     width: 1.5rem;
     height: 1.5rem;
-    background: url(../../img/common/del_icon.png) center no-repeat;
+    background: url(/img/common/del_icon.png) center no-repeat;
     background-size: 100%;
     display: inline-block;
     cursor: pointer;
@@ -1332,35 +1118,6 @@ header .utill a.search {
     border-radius: 3.5rem 5rem 4rem 4.5rem;
 }
 
-/* .play_btn_area {
-    position: fixed;
-    right: 3rem;
-    z-index: 5;
-    bottom: 3rem;
-}
-
-.play_btn_area a {
-    display: block;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    font-size: 0;
-    line-height: 0;
-    box-shadow: 0.5rem 0.5rem 0.8rem rgba(0, 0, 0, 0.05);
-}
-
-.play_btn_area a.play_btn01 {
-    background-image: url(../../img/common/loop_icon01.png);
-}
-
-.play_btn_area a.play_btn02 {
-    background-image: url(../../img/common/loop_icon02.png);
-    margin-top: 1.5rem;
-} */
-
 /* 선택 재생 */
 .btn_playback_block {
     display: flex;
@@ -1421,8 +1178,8 @@ header .utill a.search {
 }
 
 /*0606 새로추가*/
-.fixed_header { top: 0; }
-.fixed_header .bar_header.step_header { position: fixed; }
+.fixed_header { top: 0; z-index: 300; }
+.fixed_header .bar_header.step_header { position: fixed; z-index: 300; }
 
 .move_header {
     position: fixed;
@@ -1459,6 +1216,11 @@ header .utill a.search {
 
 .move_header.scroll .bar_header.scroll {
     top: 0;
+}
+
+/* tippy.js z-index 강제 적용 */
+.tippy-box {
+    z-index: 100 !important;
 }
 
 @media (max-width: 1800px) {
@@ -1614,8 +1376,10 @@ header .utill a.search {
     }
 
     .sub_content {
-        padding-top: 8rem;
+        padding-top: 11rem;
     }
+
+    body:has(.step_header) .sub_content { padding-top: 18rem; }
 
     .select_top {
         padding: 2rem 0;
@@ -1661,11 +1425,6 @@ header .utill a.search {
     .search_thumnail ul li:nth-child(n + 4) {
         margin-top: 3rem;
     }
-
-    /* .play_btn_area a {
-        width: 13rem;
-        height: 13rem;
-    } */
 
     .home_btn {
         width: 5.5rem;

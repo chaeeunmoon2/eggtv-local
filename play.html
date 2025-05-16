@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>영어놀이 | EGGTV List</title>
+  <link rel="preconnect" href="https://de2tho0n83703.cloudfront.net/" />
+  <link rel="stylesheet" href="./public/css/eggtv/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="./public/css/eggtv/main.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="./public/css/eggtv/popup_v1.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="./public/css/eggtv/play.css" type="text/css" charset="utf-8" />
+  <script src="./public/js/eggtv/common_240928.js"></script>
+  <!-- <script src="/public/js/eggtv/step.js"></script> -->
+</head>
+
+<body>
+  <!--<input type="hidden" name="_token" value="{{ csrf_token() }}" />-->
+  <!--<input type="hidden" name="token" id="token" value="{{ $token }}" />-->
+  <!--<input type="hidden" name="step" id="step" value="{{ $step }}" />-->
+  <div class="step_page">
+    <!--step01~05-->
+    <div class="move_header">
+      <div class="bar_header step_header normal" style="background-color: #f34849;">
+        <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
+        <div class="wrap block">
+          <!-- <a href="/eggtv/app/main?index={{ $index }}" class="prev_arrow">이전페이지</a> -->
+          <div class="title_block">
+            <a href="#" onclick="return false;" class="prev_arrow">이전페이지</a>
+            <p><!--여기 텍스트도 맞게 변경해야합니다!!-->
+              <strong>
+                <img src="./public/img/common/eng_step_play_logo.png" alt="영어놀이">
+              </strong>
+              <em>오늘은 영어로 어떤 놀이를 할까?</em>
+            </p>
+          </div>
+        </div>
+        <img class="step_char" src="./public/img/common/step14_bg.png" alt="">
+      </div>
+      <div class="bar_header step_header scroll" style="background-color: #f34849;">
+        <!--여기 클래스이름 step01, step02, step03, step04, step05 만 변경 / dp1, dp2 추가(20240724)-->
+        <div class="wrap">
+          <!-- <a href="/eggtv/app/main?index={{ $index }}" class="prev_arrow">이전페이지</a> -->
+          <a href="#" onclick="return false;" class="prev_arrow">이전페이지</a>
+          <p><!--여기 텍스트도 맞게 변경해야합니다!!-->
+            <strong><img src="./public/img/common/eng_step_play_logo.png" alt="영어놀이"></strong>
+            <em>오늘은 영어로 어떤 놀이를 할까?</em>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--step01-->
+    <div class="play_page">
+      <div class="play_program_wrapper">
+        <section class="play_dropdown_block">
+          <div class="title_block">
+            <h3 class="title_tag">프로그램명</h3>
+            <div class="dropdown_menu">
+              <button class="btn_dropdown">
+                Yellow Story Performance
+              </button>
+              <ul class="dropdown_content">
+                <li class="dropdown_item">Yellow Story Performance</li>
+                <li class="dropdown_item">Yellow Telling Performance</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="play_program_block fadeIn">
+          <article class="book_list_block">
+            <div class="title_block">
+              <h3 class="title_tag">5월의 주제</span>
+                <h4 class="play_subject">All about Me</h5>
+            </div>
+            <ul class="book_list">
+              <li>
+                <a href="" class="book_item dimmed">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_01.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" class="book_item">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_02.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" class="book_item dimmed">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_03.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" class="book_item dimmed">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_04.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <div class="title_block">
+              <h3 class="play_topic_title"><i class="ico_star"></i> 영어놀이 활동 목표</h3>
+              <ul class="play_topic_menu">
+                <li class="menu_item">1주차</li>
+                <li class="menu_item active">2주차</li>
+                <li class="menu_item">3주차</li>
+                <li class="menu_item">4주차</li>
+              </ul>
+            </div>
+            <div class="play_topic">
+              <div class="content_box fadeIn">
+                <h5 class="content_title">Dirty And Clean</h5>
+                <p class="content_desc">
+                  Dirty와 Clean 반대되는 말 어휘를 확장할 수 있어요.<br />
+                  또한 I'm washing. 문장을 통해 생활습관 표현도 문장으로 습득해 볼 수 있답니다.<br />
+                  손과 발을 씻는 행위를 통해 나 뿐만 아니라 가족 구성원의 청결 상태도 표현할 수 있는 Yellow+ How About A
+                  Bubble Bath? 을 통해 의미를 더 확장할 수 있어요.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="play_program_block fadeIn">
+          <article class="book_list_block">
+            <div class="title_block">
+              <h3 class="title_tag">6월의 주제</span>
+                <h4 class="play_subject">All about Me</h5>
+            </div>
+            <ul class="book_list">
+              <li>
+                <a href="" class="book_item dimmed">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_05.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" class="book_item">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_06.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" class="book_item dimmed">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_07.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" class="book_item dimmed">
+                  <p class="period">10.13 - 10.30</p>
+                  <img src="https://de2tho0n83703.cloudfront.net/eggtv/renew01/main/ms/ms_list_08.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <div class="title_block">
+              <h3 class="play_topic_title"><i class="ico_star"></i> 영어놀이 활동 목표</h3>
+              <ul class="play_topic_menu">
+                <li class="menu_item">1주차</li>
+                <li class="menu_item active">2주차</li>
+                <li class="menu_item">3주차</li>
+                <li class="menu_item">4주차</li>
+              </ul>
+            </div>
+            <div class="play_topic">
+              <div class="content_box fadeIn">
+                <h5 class="content_title">Dirty And Clean</h5>
+                <p class="content_desc">
+                  Dirty와 Clean 반대되는 말 어휘를 확장할 수 있어요.<br />
+                  또한 I'm washing. 문장을 통해 생활습관 표현도 문장으로 습득해 볼 수 있답니다.<br />
+                  손과 발을 씻는 행위를 통해 나 뿐만 아니라 가족 구성원의 청결 상태도 표현할 수 있는 Yellow+ How About A
+                  Bubble Bath? 을 통해 의미를 더 확장할 수 있어요.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.btn_dropdown').on('click', function (e) {
+        e.stopPropagation(); // 이벤트 버블링 방지
+        $('.dropdown_content').not($(this).next()).slideUp(); // 다른 드롭다운 닫기
+        $(this).toggleClass('open');
+        $(this).next('.dropdown_content').slideToggle();
+      });
+
+      // 바깥을 클릭하면 드롭다운 닫힘
+      $(document).on('click', function () {
+        $('.dropdown_content').slideUp();
+        $('.btn_dropdown').removeClass('open');
+      });
+
+      $(document).on('.dropdown_menu .dropdown_item', 'click', function () {
+        $('.btn_dropdown').removeClass('open');
+
+      });
+
+      $(document).on('.play_topic_menu .menu_item', 'click', function () {
+        $(this).next('.dropdown_content').addClass('show');
+      });
+
+      $('.play_topic_menu .menu_item').click(function () {
+        $(this).closest('.play_topic_menu').find('.menu_item').removeClass('active');
+        $(this).addClass('active');
+
+        const $box = $(this).closest('.title_block')
+          .siblings('.play_topic')
+          .find('.content_box');
+
+        $box.removeClass('fadeIn');
+        void $box[0].offsetWidth; // 강제 reflow
+        $box.addClass('fadeIn');
+      });
+    });
+  </script>
+</body>
+
+</html>

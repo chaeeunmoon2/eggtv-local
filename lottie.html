@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottie Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js"></script>
+</head>
+<body>
+
+<div id="lottie-animation" style="width: 500px; height: 500px;"></div>
+
+<script>
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-animation'), // 애니메이션을 삽입할 컨테이너
+        renderer: 'svg', // 애니메이션 렌더러: 'svg', 'canvas', 'html'
+        loop: true, // 반복 여부
+        autoplay: true, // 자동 재생 여부
+        path: './public/icon_confetti.json' // 로티 JSON 파일 경로
+    });
+
+    console.log('Animation:', animation);
+
+</script>
+
+</body>
+</html>

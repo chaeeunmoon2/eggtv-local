@@ -1,8 +1,10 @@
 .daily_egg_page {
     --spacing-section: 4em;
-    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
     background-color: #fff;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .daily_egg_page .bar_header.step_header p strong {
@@ -14,8 +16,7 @@
     padding: 1rem 0;
 }
 
-.content { 
-    min-height: 100vh;
+.content {
     position: relative;
     z-index: 1;
 }
@@ -28,36 +29,139 @@
 .topic_section .wrap {
     display: flex;
     gap: 3.5em;
-    justify-content: space-between;
     align-items: center;
 }
 
-.topic_section .thumb_block { 
+.topic_section .thumb_block {
     max-width: 40%;
     aspect-ratio: 25 / 23;
     border-radius: 2.5em;
     overflow: hidden;
 }
 
-.topic_section .desc_block { max-width: 60%; }
+.topic_section .desc_block { max-width: 60%; flex: 1; }
 
-.topic_section .thumb_block img { 
+.topic_section .thumb_block img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.topic_section .topic_box .title {    
+.topic_section .topic_box .title {
+    min-width: 9.5em;
     font-family: var(--font-family-cookieRun);
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     color: #3ea19a;
     font-weight: 600;
-    margin-bottom: 0.4em;
 }
+
+.topic_section .topic_box .title_block {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.daily_egg_page .progress_block {
+    position: relative;
+    width: 100%;
+}
+
+.daily_egg_page .progress_block .progress_status {
+    position: absolute;
+    top: -2.25rem;
+    right: 0;
+    font-size: 1.3rem;
+    color: #797876;
+    text-align: right;
+    margin-bottom: 0.6em;
+}
+
+.daily_egg_page .progress_block .progress_status .current_count {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.daily_egg_page .progress_block .progress_status .current_count.active {
+    color: #e63334;
+}
+
+.daily_egg_page .progress_box {
+    width: 100%;
+    height: 0.7rem;
+    background-color: #e2e2e2;
+    border-radius: 3em;
+}
+
+.daily_egg_page .progress_block .progress_bar {
+    width: 0;
+    position: relative;
+    display: inline-block;
+    height: inherit;
+    text-align: right;
+    background-color: #e63334;
+    border-radius: 3em;
+    transition: width 0.8s ease-in;
+}
+
+.daily_egg_page .progress_block .ico_handle {
+    display: inline-block;
+    width: 3.5rem;
+    height: 4.6rem;
+    background: url(/img/common/ico_progress.png) center center no-repeat;
+    background-size: contain;
+    margin-top: -2rem;
+    margin-right: -1rem;
+    cursor: pointer;
+}
+
+.daily_egg_page .progress_block .ico_handle.walk {
+    animation: walk 0.5s ease-in infinite;
+}
+
+@keyframes walk {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* tooltip */
+.tippy-box {
+    --thema-color: #ee696a;
+    background-color: var(--thema-color);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.tippy-box[data-theme~='before'] {
+    --thema-color: #cecece;
+    background-color: var(--thema-color);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.tippy-box[data-theme~='doing'] {
+    --thema-color: #ee696a;
+    background-color: var(--thema-color);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.tippy-box[data-theme~='finished'] {
+    --thema-color: #e63334;
+    background-color: var(--thema-color);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.tippy-box[data-placement^='top'] > .tippy-arrow::before { border-top-color: var(--thema-color); }
+.tippy-box[data-placement^='bottom'] > .tippy-arrow::before { border-bottom-color: var(--thema-color); }
+.tippy-box[data-placement^='left'] > .tippy-arrow::before { border-left-color: var(--thema-color); }
+.tippy-box[data-placement^='right'] > .tippy-arrow::before { border-right-color: var(--thema-color); }
 
 .topic_section .topic_box .desc {
     min-height: 2.1em;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 800;
     line-height: 1.25;
 }
@@ -70,13 +174,17 @@
 
 .btn_topic {
     min-width: 7em;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
     font-family: var(--font-family-primary);
     font-size: 1.65rem;
     color: #fff;
     text-align: center;
     font-weight: 600;
-    padding: 0.25em 0.5em 0.35em;
+    line-height: 1;
+    padding: 0.5em 0.5em 0.6em;
     border-radius: 3em;
 }
 
@@ -92,24 +200,28 @@
     background-size: contain !important;
 }
 
+.btn_topic .ico { top: 0; }
+.btn_topic .ico.ico_book { top: 0.05em; }
+
 .ico_book {
-    background: url(../../img/common/ico_book.png) center center no-repeat;
+    top: 0.1em;
+    background: url(./../../img/common/ico_book.png) center center no-repeat;
 }
 
 .pink.ico_book {
-    background: url(../../img/common/ico_book_pink.png) center center no-repeat;
+    background: url(./../../img/common/ico_book_pink.png) center center no-repeat;
 }
 
 .ico_tip {
-    background: url(../../img/common/ico_tip.png) center center no-repeat;
+    background: url(./../../img/common/ico_tip.png) center center no-repeat;
 }
 
 .orange.ico_tip {
-    background: url(../../img/common/ico_tip_orange.png) center center no-repeat;
+    background: url(./../../img/common/ico_tip_orange.png) center center no-repeat;
 }
 
 .ico_more {
-    background: url(../../img/common/ico_more.png) center center no-repeat;
+    background: url(./../../img/common/ico_more.png) center center no-repeat;
 }
 
 .ico_plus {
@@ -117,14 +229,13 @@
     top: 0.25em;
     width: 1.3em;
     height: 1.3em;
-    background: url(../../img/common/ico_plus.png) center center no-repeat;
+    background: url(./../../img/common/ico_plus.png) center center no-repeat;
 }
 
 .topic_section .keypoint_box .title {
     font-family: var(--font-family-cookieRun);
     font-size: 2.1rem;
     font-weight: 600;
-    /* letter-spacing: -0.05em; */
     margin-bottom: 0.4em;
 }
 
@@ -143,7 +254,7 @@
 .topic_section .keypoint_box .desc {
     font-size: 1.6rem;
     line-height: 1.6;
-    display: -webkit-box;   
+    display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 2; /* 제한할 텍스트의 줄 수 */
@@ -200,7 +311,7 @@
     align-items: center;
 }
 
-.storybook_box .img_book { 
+.storybook_box .img_book {
     max-width: 400px;
     width: 18%;
     object-fit: cover;
@@ -219,34 +330,6 @@
 .step_box .list_block {
     margin: 0 -3rem;
     padding-inline: 3rem;
-}
-
-.video_slide .lock_layer {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 10;
-}
-
-.video_slide .lock_layer.show { display: flex; }
-
-.video_slide .lock_layer .ico_lock {
-    max-width: 8%;
-    width: 50px;
-}
-
-.video_slide .lock_layer .msg {
-    font-size: 1.8rem;
-    color: #fff;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-top: 0.5em;
 }
 
 .step_box .video_slide .item a, .step_box .card_slide .item a {
