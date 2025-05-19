@@ -30,8 +30,8 @@
     font-family: "Myriad Pro Black";
     font-style: normal;
     font-weight: 900;
-    src: url(/fonts/MyriadPro-Black.woff) format('woff'),
-    url(/fonts/MyriadPro-Black.woff2) format('woff2');
+    src: url(../../fonts/MyriadPro-Black.woff) format('woff'),
+    url(../../fonts/MyriadPro-Black.woff2) format('woff2');
 }
 
 /* 쿠키런 */
@@ -39,21 +39,21 @@
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 900;
-    src: url(/fonts/CookieRun-Black.woff) format('woff');
+    src: url(../../fonts/CookieRun/CookieRun-Black.woff) format('woff');
 }
 
 @font-face {
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 600;
-    src: url(/fonts/CookieRun-Bold.woff) format('woff');
+    src: url(../../fonts/CookieRun/CookieRun-Bold.woff) format('woff');
 }
 
 @font-face {
     font-family: 'CookieRun';
     font-style: normal;
     font-weight: 400;
-    src: url(/fonts/CookieRun-Regular.woff) format('woff');
+    src: url(../../fonts/CookieRun/CookieRun-Regular.woff) format('woff');
 }
 
 /* 한글폰트 - Noto Sans KR / 일본 폰트 - Noto Sans JP, M PLUS 1p */
@@ -858,7 +858,7 @@ header .utill a.search {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url(/img/common/home_icon.png);
+    background-image: url(../../img/common/home_icon.png);
     margin-left: auto;
 }
 
@@ -875,12 +875,12 @@ header .utill a.search {
 }
 
 .prev_arrow.brown {
-    background-image: url(/img/common/arrow_brown.png);
+    background-image: url(../..//img/common/arrow_brown.png);
     background-size: 100%;
 }
 
 .prev_arrow.light_brown {
-    background-image: url(/img/common/arrow_light_brown.png);
+    background-image: url(../../img/common/arrow_light_brown.png);
     background-size: 100%;
 }
 
@@ -916,7 +916,7 @@ body:has(.step_header) .sub_content {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: #fff url(/img/common/select_arrow.png) right 1.5rem center
+    background: #fff url(../../img/common/select_arrow.png) right 1.5rem center
     no-repeat;
     background-size: 1.5rem;
     min-width: 20rem;
@@ -936,7 +936,7 @@ body:has(.step_header) .sub_content {
 .search_section {
     min-height: 100vh;
     height: auto;
-    background: #fffbf2 url(/img/common/search_bg.jpg) right 5rem bottom
+    background: #fffbf2 url(../../img/common/search_bg.jpg) right 5rem bottom
     no-repeat;
     background-size: 55rem;
 }
@@ -997,7 +997,7 @@ body:has(.step_header) .sub_content {
     line-height: 0;
     width: 4rem;
     height: 5rem;
-    background: url(/img/common/search_icon.png) center no-repeat;
+    background: url(../../img/common/search_icon.png) center no-repeat;
     background-size: 100%;
     position: absolute;
     right: 1rem;
@@ -1042,7 +1042,7 @@ body:has(.step_header) .sub_content {
     line-height: 0;
     width: 1.5rem;
     height: 1.5rem;
-    background: url(/img/common/del_icon.png) center no-repeat;
+    background: url(../../img/common/del_icon.png) center no-repeat;
     background-size: 100%;
     display: inline-block;
     cursor: pointer;
